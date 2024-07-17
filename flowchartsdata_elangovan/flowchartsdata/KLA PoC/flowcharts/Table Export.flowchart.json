@@ -1,0 +1,129 @@
+{
+  "modifiedOn": "2024-07-04T10:55:54.854Z",
+  "name": "Table Export",
+  "id": "-1",
+  "type": 0,
+  "createdOn": "2024-07-02T04:19:29Z",
+  "content": {
+    "nodesMap": {
+      "fcn_start_0": {
+        "id": "fcn_start_0",
+        "content": "Start",
+        "nodeType": "start",
+        "branches": [
+          "fcn_tableexport_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_tableexport_0": {
+        "id": "fcn_tableexport_0",
+        "content": "Table Export",
+        "nodeType": "pathlabel",
+        "branches": [
+          "fcn_login3dexperience_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_login3dexperience_0": {
+        "id": "fcn_login3dexperience_0",
+        "content": "Login 3d Experience",
+        "nodeType": "action",
+        "branches": [
+          "fcn_openexistingpart_0",
+          "fcn_pauverification_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_openexistingpart_0": {
+        "id": "fcn_openexistingpart_0",
+        "content": "Open Existing $part",
+        "nodeType": "action",
+        "branches": [
+          "fcn_exportpartebom_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_exportpartebom_0": {
+        "id": "fcn_exportpartebom_0",
+        "content": "Export $part EBOM",
+        "nodeType": "action",
+        "branches": [],
+        "dataSetId": "-1"
+      },
+      "fcn_pauverification_0": {
+        "id": "fcn_pauverification_0",
+        "content": "PAU Verification",
+        "nodeType": "pathsublabel",
+        "branches": [
+          "fcn_pauverification_1"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_pauverification_1": {
+        "id": "fcn_pauverification_1",
+        "content": "PAU Verification $user",
+        "nodeType": "action",
+        "branches": [
+          "fcn_verifymqlforuser_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_verifymqlforuser_0": {
+        "id": "fcn_verifymqlforuser_0",
+        "content": "Verify MQL for $user",
+        "nodeType": "state",
+        "branches": [],
+        "dataSetId": "-1"
+      }
+    },
+    "positions": {
+      "fcn_start_0": {
+        "top": 150,
+        "left": 500
+      },
+      "fcn_tableexport_0": {
+        "top": 211.8000030517578,
+        "left": 500
+      },
+      "fcn_login3dexperience_0": {
+        "top": 270.3999938964844,
+        "left": 500
+      },
+      "fcn_openexistingpart_0": {
+        "top": 329,
+        "left": 500
+      },
+      "fcn_exportpartebom_0": {
+        "top": 394.1499938964844,
+        "left": 500
+      },
+      "fcn_pauverification_0": {
+        "top": 329,
+        "left": 780
+      },
+      "fcn_pauverification_1": {
+        "top": 387.6000061035156,
+        "left": 780
+      },
+      "fcn_verifymqlforuser_0": {
+        "top": 452.75,
+        "left": 782
+      }
+    },
+    "settings": {
+      "maxProceedDepth": 100,
+      "maxProceedsForFirstDepth": 1,
+      "maxProceedsPerDepth": 1,
+      "maxPathRepititionsPerComboPath": 1,
+      "maxProceedsPerPath": 10000,
+      "maxToggles": 2,
+      "maxMatchingPaths": 3
+    },
+    "isPrimary": true,
+    "pathNames": [],
+    "flowChartUID": "fcUID_1720072161895",
+    "pathExecutionOrder": []
+  },
+  "enabled": true,
+  "parentId": ""
+}

@@ -1,0 +1,64 @@
+{
+  "modifiedOn": "2024-07-08T08:57:08.954Z",
+  "name": "GotoDetails",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-25T03:49:58Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "GotoDetails",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "/blank/"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_link(\"Details\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_link(\"All Affected Items\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_highlight",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_cell(0,_under(_parentNode(_row(\"EOL[1]\"),3)),_in(_table(\"tbr\")))"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

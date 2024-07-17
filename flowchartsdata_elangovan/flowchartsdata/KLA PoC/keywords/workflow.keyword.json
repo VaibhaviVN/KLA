@@ -1,0 +1,68 @@
+{
+  "modifiedOn": "2024-06-26T10:39:09.404Z",
+  "name": "workflow",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-25T17:39:53Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "workflow",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"tvc-dp-handle\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"CO Review Workflow Active Started by ibanados • 5 minutes ago\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"Reassign Task\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": true,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_label(168)"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "Arivazhagan, Elangovan (earivazh)"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

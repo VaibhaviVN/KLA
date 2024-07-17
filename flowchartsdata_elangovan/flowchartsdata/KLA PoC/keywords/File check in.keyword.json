@@ -1,0 +1,15 @@
+{
+  "modifiedOn": "2024-06-27T09:48:47.694Z",
+  "name": "File check in",
+  "id": "0",
+  "type": 3,
+  "createdOn": "2024-06-27T09:48:47.694Z",
+  "content": {
+    "title": "File check in",
+    "parameters": [],
+    "steps": [],
+    "isSystemKeyword": false
+  },
+  "enabled": false,
+  "parentId": ""
+}

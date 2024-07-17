@@ -1,0 +1,84 @@
+{
+  "modifiedOn": "2024-07-02T11:36:16.130Z",
+  "name": "part",
+  "id": "-1",
+  "type": 1,
+  "createdOn": "2024-06-23T07:13:10Z",
+  "content": {
+    "default": {
+      "attr_01719226835028": {
+        "name": "partNumberArr",
+        "accessors": [
+          {
+            "id": "acc0",
+            "name": "Part Number Input",
+            "accessor": "",
+            "messageAccessor": ""
+          }
+        ],
+        "type": "text",
+        "props": {},
+        "invalidData": [],
+        "validData": []
+      },
+      "attr_11719554120469": {
+        "name": "description",
+        "accessors": [
+          {
+            "id": "acc0",
+            "name": "Description Input",
+            "accessor": "_textarea(\"descr\")",
+            "messageAccessor": ""
+          }
+        ],
+        "type": "text",
+        "props": {
+          "prefix": "Test",
+          "min-length": "0",
+          "max-length": "0"
+        },
+        "invalidData": [],
+        "validData": []
+      },
+      "attr_21719572341555": {
+        "name": "revisePartNumber",
+        "accessors": [
+          {
+            "id": "acc0",
+            "name": "Revise Part Number Input",
+            "accessor": "_textarea(\"F9_input\")",
+            "messageAccessor": ""
+          }
+        ],
+        "type": "number",
+        "props": {
+          "min": "290068",
+          "max": "290068"
+        },
+        "invalidData": [],
+        "validData": []
+      },
+      "attr_31719920176100": {
+        "name": "mCOdate",
+        "accessors": [
+          {
+            "id": "acc0",
+            "name": "M C Odate Input",
+            "accessor": "_textbox(0,_in(_table(\"tbr\")))",
+            "messageAccessor": ""
+          }
+        ],
+        "type": "text",
+        "props": {
+          "prefix": "Dec 30, 2024",
+          "min-length": "0",
+          "max-length": "0"
+        },
+        "invalidData": [],
+        "validData": []
+      }
+    }
+  },
+  "enabled": false,
+  "parentId": ""
+}

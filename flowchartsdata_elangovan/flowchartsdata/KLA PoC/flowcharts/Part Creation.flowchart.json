@@ -1,0 +1,104 @@
+{
+  "modifiedOn": "2024-06-27T05:47:31.120Z",
+  "name": "Part Creation",
+  "id": "-1",
+  "type": 0,
+  "createdOn": "2024-06-22T18:31:35Z",
+  "content": {
+    "nodesMap": {
+      "fcn_start_0": {
+        "id": "fcn_start_0",
+        "content": "Start",
+        "nodeType": "start",
+        "branches": [
+          "fcn_partcreation_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_partcreation_0": {
+        "id": "fcn_partcreation_0",
+        "content": "Part Creation",
+        "nodeType": "pathlabel",
+        "branches": [
+          "fcn_login_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_login_0": {
+        "id": "fcn_login_0",
+        "content": "Login 3d Experience",
+        "nodeType": "action",
+        "branches": [
+          "fcn_createpart_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_createpart_0": {
+        "id": "fcn_createpart_0",
+        "content": "Create $part",
+        "nodeType": "action",
+        "branches": [
+          "fcn_partexiststrue_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_partexiststrue_0": {
+        "id": "fcn_partexiststrue_0",
+        "content": "$part.exists\u003dtrue",
+        "nodeType": "state",
+        "branches": [
+          "fcn_createspecificationforpart_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_createspecificationforpart_0": {
+        "id": "fcn_createspecificationforpart_0",
+        "content": "Create Specification for $part",
+        "nodeType": "action",
+        "branches": [],
+        "dataSetId": -1
+      }
+    },
+    "positions": {
+      "fcn_start_0": {
+        "top": 150,
+        "left": 500
+      },
+      "fcn_partcreation_0": {
+        "top": 211.8000030517578,
+        "left": 500
+      },
+      "fcn_login_0": {
+        "top": 270.3999938964844,
+        "left": 500
+      },
+      "fcn_createpart_0": {
+        "top": 329,
+        "left": 500
+      },
+      "fcn_partexiststrue_0": {
+        "top": 399.1499938964844,
+        "left": 503
+      },
+      "fcn_createspecificationforpart_0": {
+        "top": 464.29999389648435,
+        "left": 503
+      }
+    },
+    "settings": {
+      "maxProceedsPerPath": 10000,
+      "maxProceedDepth": 100,
+      "maxProceedsPerDepth": 1,
+      "maxProceedsForFirstDepth": 1,
+      "maxMatchingPaths": 3,
+      "maxPathRepititionsPerComboPath": 1,
+      "maxToggles": 2
+    },
+    "isPrimary": true,
+    "pathNames": [],
+    "flowChartUID": "fcUID_1719219618243",
+    "pathExecutionOrder": []
+  },
+  "enabled": true,
+  "parentId": ""
+}

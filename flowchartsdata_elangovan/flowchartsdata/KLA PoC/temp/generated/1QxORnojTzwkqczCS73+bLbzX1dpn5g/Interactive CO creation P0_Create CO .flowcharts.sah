@@ -1,0 +1,882 @@
+_focusWindow();
+_sahi.setTFCModeEnabled();
+
+
+/*Functions Start*/
+
+_include("sahi_tfc_common.flowcharts.sah");
+
+
+var $__tfcix=0;
+var $__tfc_validation=false;
+function _tfc_Login_3d_Experience() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Login_3d_Experience", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Login 3d Experience", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(\"username\")</td><td>earivazh</td></tr></table>", "GROUP_START");
+  _setValue(_textbox("username"), "earivazh");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setPassword</td><td>_password(\"password\")</td><td>\"*****\"</td></tr></table>", "GROUP_START");
+  _setPassword(_password("password"), "enoviaKLA123", true);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_submit(\"Log in\")</td></tr></table>", "GROUP_START");
+  _click(_submit("Log in"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_windowAction</td><td>maximize</td></tr></table>", "GROUP_START");
+  _windowAction("maximize");
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Create_Part($part) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Create_Part", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Create $part", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_wait</td><td>8000</td></tr></table>", "GROUP_START");
+  _wait(8000);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"add topbar-menu-item topbar-cmd enabled fonticon fonticon-plus\")</td></tr></table>", "GROUP_START");
+  _click(_div("add topbar-menu-item topbar-cmd enabled fonticon fonticon-plus"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_listItem(\"Create Part\")</td></tr></table>", "GROUP_START");
+  _click(_listItem("Create Part"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>/NonModalWindow/</td></tr></table>", "GROUP_START");
+  _selectWindow("/NonModalWindow/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(0, _rightOf(_span(\"Type\"),50))</td><td>Cable</td></tr></table>", "GROUP_START");
+  _setValue(_textbox(0, _rightOf(_span("Type"),50)), "Cable");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"Cable and Harness\")</td></tr></table>", "GROUP_START");
+  _click(_div("Cable and Harness"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>Description Input ($part)</td><td>$part.description</td></tr></table>", "GROUP_START");
+  var $unescapeVar_2 = unescapeString($part.description);
+  _setValue($part.accessors.attr_11719554120469[0].accessor, $unescapeVar_2);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(0,_rightOf(_cell(\"Project\")))</td><td>WIN 7xxx</td></tr></table>", "GROUP_START");
+  _setValue(_textbox(0,_rightOf(_cell("Project"))), "WIN 7xxx");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"WIN 7XXX\")</td></tr></table>", "GROUP_START");
+  _click(_div("WIN 7XXX"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_textbox(0,_rightOf(_cell(\"Unit of Measure\")))</td></tr></table>", "GROUP_START");
+  _click(_textbox(0,_rightOf(_cell("Unit of Measure"))));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"EA (each)\")</td></tr></table>", "GROUP_START");
+  _click(_div("EA (each)"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_cell(\".tvc.btn.continue.img\")</td></tr></table>", "GROUP_START");
+  _click(_cell(".tvc.btn.continue.img"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Done\")</td></tr></table>", "GROUP_START");
+  _click(_link("Done"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td></tr></table>", "GROUP_START");
+  _selectWindow();
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_wait</td><td>90000</td><td>_isVisible(_div(\"TopPanelTitle\"))</td></tr></table>", "GROUP_START");
+  _wait(90000, _isVisible(_div("TopPanelTitle")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_image(\"Maximize the Top Panel\")</td></tr></table>", "GROUP_START");
+  if(_isVisible(_image("Maximize the Top Panel"))) {
+  _click(_image("Maximize the Top Panel"));
+  } else {
+  _tfcLog("_image(\"Maximize the Top Panel\") is not visible.");
+  }
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_italic(\"/TopPanelButton TopPanelControl ti-c ti-details-c/\")</td></tr></table>", "GROUP_START");
+  if(_isVisible(_italic("/TopPanelButton TopPanelControl ti-c ti-details-c/"))) {
+  _click(_italic("/TopPanelButton TopPanelControl ti-c ti-details-c/"));
+  } else {
+  _tfcLog("_italic(\"/TopPanelButton TopPanelControl ti-c ti-details-c/\") is not visible.");
+  }
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Store: _extract</td><td>_getText(_div(\"TopPanelTitle\"))</td><td>(.*):(.*)</td><td>true</td><td>$part.partNumberArr</td></tr></table>", "GROUP_START");
+  $part.partNumberArr =   _extract(_getText(_div("TopPanelTitle")), "(.*):(.*)", true);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_log</td><td>$part.partNumberArr[1]</td></tr></table>", "GROUP_START");
+  _log($part.partNumberArr[1]);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Equals: _getText</td><td>_div(\"TopPanelDetailsFieldValue\", _near(_div(\"/Description/\")))</td><td>$part.description</td></tr></table>", "GROUP_START");
+  _assertEqual($part.description,   _getText(_div("TopPanelDetailsFieldValue", _near(_div("/Description/")))));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Create_Specification_For_Part($part) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Create_Specification_For_Part", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Create Specification for $part", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Specifications\")</td></tr></table>", "GROUP_START");
+  _click(_link("Specifications"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Actions\")</td></tr></table>", "GROUP_START");
+  _click(_span("Actions"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Add New\")</td></tr></table>", "GROUP_START");
+  _click(_span("Add New"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"item\", _near(_span(\"Doc Type\")))</td></tr></table>", "GROUP_START");
+  _click(_div("item", _near(_span("Doc Type"))));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"Business Procedure (ISO)\")</td></tr></table>", "GROUP_START");
+  _click(_div("Business Procedure (ISO)"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Submit\")</td></tr></table>", "GROUP_START");
+  _click(_link("Submit"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Equals: _getText</td><td>_div(\"One object was successfully created\")</td><td>One object was successfully created</td></tr></table>", "GROUP_START");
+  _assertEqual("One object was successfully created",   _getText(_div("One object was successfully created")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Close\")</td></tr></table>", "GROUP_START");
+  _click(_link("Close"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_div(\"tblc\")</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_div("tblc")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_textbox(\"tvcJSDropzone\")</td></tr></table>", "GROUP_START");
+  _click(_textbox("tvcJSDropzone"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setFile3</td><td>_file(0)</td><td>C:\\\\Users\\\\earivazh\\\\sahi_pro\\\\userdata\\\\scripts\\\\ChangeOrder.s.csv</td></tr></table>", "GROUP_START");
+  _resource("C://Users//earivazh//sahi_pro//userdata//scripts//ChangeOrder.s.csv");
+  _setFile3(_file(0), "C://Users//earivazh//sahi_pro//userdata//scripts//ChangeOrder.s.csv");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_image(\"Download\")</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_image("Download")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_image(\"Delete this Version\")</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_image("Delete this Version")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_image(\"Edit\")</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_image("Edit")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_image(\"Add\")</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_image("Add")));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Create_Changeorder($changeorder) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Create_Changeorder", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Create $changeorder", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"add topbar-menu-item topbar-cmd enabled fonticon fonticon-plus\")</td></tr></table>", "GROUP_START");
+  _click(_div("add topbar-menu-item topbar-cmd enabled fonticon fonticon-plus"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Create Change Order\")</td></tr></table>", "GROUP_START");
+  _click(_span("Create Change Order"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>/NonModalWindow/</td></tr></table>", "GROUP_START");
+  _selectWindow("/NonModalWindow/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>Description Input ($changeorder)</td><td>$changeorder.description</td></tr></table>", "GROUP_START");
+  var $unescapeVar_2 = unescapeString($changeorder.description);
+  _setValue($changeorder.accessors.attr_01718968102610[0].accessor, $unescapeVar_2);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"/selectize-input items/\", _near(_cell(\"Project\")))</td><td></td></tr></table>", "GROUP_START");
+  _click(_div("/selectize-input items/", _near(_cell("Project"))), "");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(0,_in(_div(\"/selectize-input items/\", _near(_cell(\"Project\")))))</td><td>WIN 7xxx</td></tr></table>", "GROUP_START");
+  _setAutomaticBlur(false);
+  _setValue(_textbox(0,_in(_div("/selectize-input items/", _near(_cell("Project"))))), "WIN 7xxx");
+  _setAutomaticBlur(true);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"active\")</td></tr></table>", "GROUP_START");
+  _click(_div("active"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"/selectize-input items/\", _near(_cell(\"Change Coordinator\")))</td><td></td></tr></table>", "GROUP_START");
+  _click(_div("/selectize-input items/", _near(_cell("Change Coordinator"))), "");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"BANADOS, IMELDA\")</td></tr></table>", "GROUP_START");
+  _click(_div("BANADOS, IMELDA"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"/selectize-input items/\", _near(_cell(\"Change Classification\")))</td><td></td></tr></table>", "GROUP_START");
+  _click(_div("/selectize-input items/", _near(_cell("Change Classification"))), "");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"6 Business Process only\")</td></tr></table>", "GROUP_START");
+  _click(_div("6 Business Process only"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"/selectize-input items/\", _near(_cell(\"CO Type\")))</td><td></td></tr></table>", "GROUP_START");
+  _click(_div("/selectize-input items/", _near(_cell("CO Type"))), "");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"Business Procedure\")</td></tr></table>", "GROUP_START");
+  _click(_div("Business Procedure"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Done\")</td></tr></table>", "GROUP_START");
+  _click(_link("Done"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td></tr></table>", "GROUP_START");
+  _selectWindow();
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Verify_Changeorder($changeorder) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Verify_Changeorder", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Verify $changeorder", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Details\")</td></tr></table>", "GROUP_START");
+  _click(_link("Details"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Equals: _getText</td><td>_cell(\"inputField\", _near(_span(\"Description\")))</td><td>$changeorder.description</td></tr></table>", "GROUP_START");
+  _assertEqual($changeorder.description,   _getText(_cell("inputField", _near(_span("Description")))));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Add_Part_To_Changeorder($part, $changeorder) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Add_Part_To_Changeorder", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Add $part to $changeorder", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"All Affected Items\")</td></tr></table>", "GROUP_START");
+  _click(_link("All Affected Items"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Actions\")</td></tr></table>", "GROUP_START");
+  _click(_span("Actions"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Add For Release\")</td></tr></table>", "GROUP_START");
+  _click(_span("Add For Release"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_log</td><td>$part.partNumberArr[1]</td></tr></table>", "GROUP_START");
+  _log($part.partNumberArr[1]);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_log</td><td>$part.partNumberArr[1].replace(\"-AA\",\"\")</td></tr></table>", "GROUP_START");
+  _log($part.partNumberArr[1].replace("-AA",""));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textarea(\"F2_input\")</td><td>$part.partNumberArr[1].replace(\"-AA\",\"\")</td></tr></table>", "GROUP_START");
+  _setValue(_textarea("F2_input"), $part.partNumberArr[1].replace("-AA",""));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Submit\")</td></tr></table>", "GROUP_START");
+  _click(_link("Submit"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_check</td><td>_checkbox(\"emxTableRowId\")</td></tr></table>", "GROUP_START");
+  _check(_checkbox("emxTableRowId"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_check</td><td>_checkbox(\"emxTableRowId[1]\")</td></tr></table>", "GROUP_START");
+  _check(_checkbox("emxTableRowId[1]"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_dragDrop</td><td>_div(\"draggable\")</td><td>_div(\"Drop Zone\")</td></tr></table>", "GROUP_START");
+  _dragDrop(_div("draggable"), _div("Drop Zone"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_image(\"tvcCloseIcon\")</td></tr></table>", "GROUP_START");
+  _click(_image("tvcCloseIcon"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Equals: _getText</td><td>_link($part.partNumberArr[1].replace(\"-AA\",\"\"), _in(_table(\"tbr\")))</td><td>$part.partNumberArr[1].replace(\"-AA\",\"\")</td></tr></table>", "GROUP_START");
+  _assertEqual($part.partNumberArr[1].replace("-AA",""),   _getText(_link($part.partNumberArr[1].replace("-AA",""), _in(_table("tbr")))));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_cell(\"Documentation\")</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_cell("Documentation")));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Add_Part_For_Revise_Dashroll_To_Changeorder($part, $changeorder) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Add_Part_For_Revise_Dashroll_To_Changeorder", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Add $part for Revise/ Dashroll to $changeorder", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"All Affected Items\")</td></tr></table>", "GROUP_START");
+  _click(_link("All Affected Items"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Actions\")</td></tr></table>", "GROUP_START");
+  _click(_span("Actions"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Add For Revise/Dashroll\")</td></tr></table>", "GROUP_START");
+  _click(_span("Add For Revise/Dashroll"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>\"/blank/\"</td></tr></table>", "GROUP_START");
+  _selectWindow("/blank/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_wait</td><td>1000</td></tr></table>", "GROUP_START");
+  _wait(1000);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setSelected</td><td>_select(\"F13_input\")</td><td>Release</td></tr></table>", "GROUP_START");
+  _setSelected(_select("F13_input"), "Release");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>Revise Part Number Input ($part)</td><td>$part.revisePartNumber</td></tr></table>", "GROUP_START");
+  var $unescapeVar_2 = unescapeString($part.revisePartNumber);
+  _setValue($part.accessors.attr_21719572341555[0].accessor, $unescapeVar_2);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Find\")</td></tr></table>", "GROUP_START");
+  _click(_link("Find"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_checkbox(\"emxTableRowId\")</td></tr></table>", "GROUP_START");
+  _click(_checkbox("emxTableRowId"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Select\")</td></tr></table>", "GROUP_START");
+  _click(_link("Select"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setSelected</td><td>_select(0)</td><td>Scrap</td></tr></table>", "GROUP_START");
+  _setSelected(_select(0), "Scrap");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_submit(\"Submit\")</td></tr></table>", "GROUP_START");
+  _click(_submit("Submit"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td></tr></table>", "GROUP_START");
+  _selectWindow();
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_check</td><td>_checkbox(\"emxTableRowId\", _leftOf(_link($part.revisePartNumber),50))</td></tr></table>", "GROUP_START");
+  _check(_checkbox("emxTableRowId", _leftOf(_link($part.revisePartNumber),50)));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Actions\")</td></tr></table>", "GROUP_START");
+  _click(_span("Actions"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Revise Selected\")</td></tr></table>", "GROUP_START");
+  _click(_span("Revise Selected"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_wait</td><td>10000</td></tr></table>", "GROUP_START");
+  _wait(10000);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_image(\"iconNewWindow.gif\", _rightOf(_link($part.revisePartNumber),50))</td></tr></table>", "GROUP_START");
+  _click(_image("iconNewWindow.gif", _rightOf(_link($part.revisePartNumber),50)));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>\"/blank/\"</td></tr></table>", "GROUP_START");
+  _selectWindow("/blank/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"EBOM\")</td></tr></table>", "GROUP_START");
+  _click(_link("EBOM"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_cell(1,_under(_row(\"F/N\"),20))</td></tr></table>", "GROUP_START");
+  _click(_cell(1,_under(_row("F/N"),20)));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(\"num\")</td><td>0004</td></tr></table>", "GROUP_START");
+  _setValue(_textbox("num"), "0004");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_closeWindow</td></tr></table>", "GROUP_START");
+  _closeWindow();
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td></tr></table>", "GROUP_START");
+  _selectWindow();
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>\"_blank1719573744435\"</td></tr></table>", "GROUP_START");
+  _selectWindow("_blank1719573744435");
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Workflow_Approver_Selection_For_Part_And_Changeorder($part, $changeorder) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Workflow_Approver_Selection_For_Part_And_Changeorder", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Workflow Approver Selection for $part and $changeorder", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Approvals-Actions\")</td></tr></table>", "GROUP_START");
+  _click(_link("Approvals-Actions"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_submit(\"Edit\")</td></tr></table>", "GROUP_START");
+  _click(_submit("Edit"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(0, _rightOf(_label(\"Dev Engineer(s)\")))</td><td>fer</td></tr></table>", "GROUP_START");
+  _setValue(_textbox(0, _rightOf(_label("Dev Engineer(s)"))), "fer");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"option active\")</td></tr></table>", "GROUP_START");
+  _click(_div("option active"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_radio(\"All as Parallel Approval\")</td></tr></table>", "GROUP_START");
+  _click(_radio("All as Parallel Approval"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_button(\"View\")</td></tr></table>", "GROUP_START");
+  _click(_button("View"));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_CO_Supporting_Docs() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_CO_Supporting_Docs", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("CO Supporting Docs", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"CO Supporting Docs\")</td></tr></table>", "GROUP_START");
+  _click(_link("CO Supporting Docs"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_image(\"Add\")</td></tr></table>", "GROUP_START");
+  _click(_image("Add"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setFile3</td><td>_file(0)</td><td>C:\\\\Users\\\\earivazh\\\\sahi_pro\\\\userdata\\\\scripts\\\\ChangeOrder.s.csv</td></tr></table>", "GROUP_START");
+  _resource("C://Users//earivazh//sahi_pro//userdata//scripts//ChangeOrder.s.csv");
+  _setFile3(_file(0), "C://Users//earivazh//sahi_pro//userdata//scripts//ChangeOrder.s.csv");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_submit(\"Submit\")</td></tr></table>", "GROUP_START");
+  _click(_submit("Submit"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_image(\"Delete this Version\")</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_image("Delete this Version")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_image(\"Edit\")</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_image("Edit")));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Promote_Part($part) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Promote_Part", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Promote $part", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_image(\"iconActionPromote.png\")</td></tr></table>", "GROUP_START");
+  _click(_image("iconActionPromote.png"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_wait</td><td>2000</td></tr></table>", "GROUP_START");
+  _wait(2000);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_wait</td><td>900000</td><td>!_isVisible(_div(\"imgProgressDiv\"))</td></tr></table>", "GROUP_START");
+  _wait(900000, !_isVisible(_div("imgProgressDiv")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Equals: _getAttribute</td><td>_cell(\"Release P...\")</td><td>class</td><td>stateNameHighlight</td></tr></table>", "GROUP_START");
+  _assertEqual("stateNameHighlight",   _getAttribute(_cell("Release P..."), "class"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_italic(\"fa fa-comments-o\")</td></tr></table>", "GROUP_START");
+  _click(_italic("fa fa-comments-o"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"All Affected Items\")</td></tr></table>", "GROUP_START");
+  _click(_link("All Affected Items"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_cell(\"Release Pending\")</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_cell("Release Pending")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_cell(\"Release Pending\", _rightOf(_link($part.partNumberArr[1].replace(\"-AA\",\"\")),50))</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_cell("Release Pending", _rightOf(_link($part.partNumberArr[1].replace("-AA","")),50))));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Open_Workflow() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Open_Workflow", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Open workflow", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Equals: _getText</td><td>_span(\"CO Review Workflow\")</td><td>CO Review Workflow</td></tr></table>", "GROUP_START");
+  _assertEqual("CO Review Workflow",   _getText(_span("CO Review Workflow")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Equals: _getText</td><td>_span(\"/status/\", _near(_span(\"CO Review Workflow\")))</td><td>Active</td></tr></table>", "GROUP_START");
+  _assertEqual("Active",   _getText(_span("/status/", _near(_span("CO Review Workflow")))));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"CO Review Workflow\")</td></tr></table>", "GROUP_START");
+  _click(_span("CO Review Workflow"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Reassign Task\")</td></tr></table>", "GROUP_START");
+  _click(_span("Reassign Task"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(0,_in(_div(\"/selectize-input items/\")))</td><td>elango</td></tr></table>", "GROUP_START");
+  _setValue(_textbox(0,_in(_div("/selectize-input items/"))), "elango");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"name\")</td></tr></table>", "GROUP_START");
+  _click(_span("name"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_submit(\"Reassign\")</td></tr></table>", "GROUP_START");
+  _click(_submit("Reassign"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Approve Task\")</td></tr></table>", "GROUP_START");
+  _click(_span("Approve Task"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textarea(\"instruction\")</td><td>Approved by automation</td></tr></table>", "GROUP_START");
+  _setValue(_textarea("instruction"), "Approved by automation");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_submit(\"Approve\")</td></tr></table>", "GROUP_START");
+  _click(_submit("Approve"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_wait</td><td>90000</td><td>!_isVisible(_submit(\"Approve\"))</td></tr></table>", "GROUP_START");
+  _wait(90000, !_isVisible(_submit("Approve")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_span(\"(Complete)\")</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_span("(Complete)")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Equals: _getAttribute</td><td>_cell(\"Technical...\")</td><td>class</td><td>stateNameHighlight</td></tr></table>", "GROUP_START");
+  _assertEqual("stateNameHighlight",   _getAttribute(_cell("Technical..."), "class"));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Verify_MCO_With_Part($part) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Verify_MCO_With_Part", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Verify MCO with $part", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"SAP Initial Data\")</td></tr></table>", "GROUP_START");
+  _click(_link("SAP Initial Data"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Plant COs (MCO)\")</td></tr></table>", "GROUP_START");
+  _click(_link("Plant COs (MCO)"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_cell(\"MCO\")</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_cell("MCO")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _exists</td><td>_link(\"Review\")</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _exists(_link("Review")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_image(\"iconNewWindow.gif[1]\")</td></tr></table>", "GROUP_START");
+  _click(_image("iconNewWindow.gif[1]"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>\"/blank/\"</td></tr></table>", "GROUP_START");
+  _selectWindow("\"/blank/\"");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Affected Part Revisions\")</td></tr></table>", "GROUP_START");
+  _click(_link("Affected Part Revisions"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Equals: _getText</td><td>_link(\"object\")</td><td>$part.partNumberArr[1].replace(\"-AA\",\"\")</td></tr></table>", "GROUP_START");
+  _assertEqual("$part.partNumberArr[1].replace(\"-AA\",\"\")",   _getText(_link("object")));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+
+
+/*Functions End*/
+
+
+/*Data Start*/
+
+var $s = {"changeorder" : [{"description" : "TestsqXWxXCFKEDdPnMSrOoD","__created_via_prepath" : false,"invalids" : {"description" : []},"valids" : {"description" : []},"accessors" : {"attr_01718968102610" : [{"id" : "acc0","name" : "Description Input","accessor" : _textarea("descr"),"messageAccessor" : ""}]},"entityType" : "changeorder"}],"global" : [{"exists" : true,"entityType" : "global","__id" : 0}],"part" : [{"invalids" : {"description" : [],"revisePartNumber" : [],"partNumberArr" : []},"valids" : {"description" : [],"revisePartNumber" : [],"partNumberArr" : []},"accessors" : {"attr_21719572341555" : [{"id" : "acc0","name" : "Revise Part Number Input","accessor" : _textarea("F9_input"),"messageAccessor" : ""}],"attr_11719554120469" : [{"id" : "acc0","name" : "Description Input","accessor" : _textarea("descr"),"messageAccessor" : ""}],"attr_01719226835028" : [{"id" : "acc0","name" : "Part Number Input","accessor" : "","messageAccessor" : ""}]},"entityType" : "part","description" : "Test","__created_via_prepath" : true,"revisePartNumber" : "290068","partNumberArr" : "aDSuRjvL"}]}
+
+/*Data End*/
+
+
+/*Data Overrides Start*/
+
+
+
+/*Data Overrides End*/
+
+
+
+/*Function Calls Start*/
+
+_tfc_Login_3d_Experience();
+_tfc_Create_Part($s.part[0]);
+_tfc_Create_Specification_For_Part($s.part[0]);
+_tfc_Create_Changeorder($s.changeorder[0]);
+_tfc_Verify_Changeorder($s.changeorder[0]);
+_tfc_Add_Part_To_Changeorder($s.part[0], $s.changeorder[0]);
+_tfc_Add_Part_For_Revise_Dashroll_To_Changeorder($s.part[0], $s.changeorder[0]);
+_tfc_Workflow_Approver_Selection_For_Part_And_Changeorder($s.part[0], $s.changeorder[0]);
+_tfc_CO_Supporting_Docs();
+_tfc_Promote_Part($s.part[0]);
+_tfc_Open_Workflow();
+
+
+/*Function Calls End*/
+

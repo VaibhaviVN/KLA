@@ -1,0 +1,67 @@
+{
+  "modifiedOn": "2024-07-05T11:07:53.501Z",
+  "name": "Verify $changeorder",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-20T11:50:49Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Verify $changeorder",
+    "parameters": [
+      {
+        "parameterId": "changeorder_",
+        "entityTypeId": "changeorder",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_wait",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "90000"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_isVisible(_link(\"Details\"))"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_link(\"Details\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_getText",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_cell(\"inputField\", _near(_span(\"Description\")))"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Assert",
+        "assertType": "Equals",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$changeorder.description"
+        }
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

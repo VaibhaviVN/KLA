@@ -1,0 +1,155 @@
+{
+  "modifiedOn": "2024-07-08T08:57:32.942Z",
+  "name": "Reports Validation",
+  "id": "-1",
+  "type": 0,
+  "createdOn": "2024-06-22T14:10:47Z",
+  "content": {
+    "nodesMap": {
+      "fcn_start_0": {
+        "id": "fcn_start_0",
+        "content": "Start",
+        "nodeType": "start",
+        "branches": [
+          "fcn_reportvalidation_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_reportvalidation_0": {
+        "id": "fcn_reportvalidation_0",
+        "content": "Report Validation",
+        "nodeType": "pathlabel",
+        "branches": [
+          "fcn_login3dexperience_1719402148268_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_login3dexperience_1719402148268_0": {
+        "id": "fcn_login3dexperience_1719402148268_0",
+        "content": "Login 3d Experience",
+        "nodeType": "action",
+        "branches": [
+          "fcn_openexistingco_0",
+          "fcn_whereusedbomreport_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_gotodetails_0": {
+        "id": "fcn_gotodetails_0",
+        "content": "GotoDetails",
+        "nodeType": "action",
+        "branches": [
+          "fcn_precheckreport_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_precheckreport_0": {
+        "id": "fcn_precheckreport_0",
+        "content": "Precheck Report",
+        "nodeType": "action",
+        "branches": [
+          "fcn_summaryreport_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_summaryreport_0": {
+        "id": "fcn_summaryreport_0",
+        "content": "Summary Report",
+        "nodeType": "action",
+        "branches": [],
+        "dataSetId": "-1"
+      },
+      "fcn_openexistingco_0": {
+        "id": "fcn_openexistingco_0",
+        "content": "Open Existing $co",
+        "nodeType": "action",
+        "branches": [
+          "fcn_gotodetails_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_whereusedbomreport_0": {
+        "id": "fcn_whereusedbomreport_0",
+        "content": "Where-Used BOM Report",
+        "nodeType": "action",
+        "branches": [
+          "fcn_whereusedbomreport_1720095724754_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_whereusedbomreport_1720095724754_0": {
+        "id": "fcn_whereusedbomreport_1720095724754_0",
+        "content": "Validate Where-Used BOM Report",
+        "nodeType": "action",
+        "branches": [
+          "fcn_validatecometrics_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_validatecometrics_0": {
+        "id": "fcn_validatecometrics_0",
+        "content": "Validate CO Metrics",
+        "nodeType": "action",
+        "branches": [],
+        "dataSetId": "-1"
+      }
+    },
+    "positions": {
+      "fcn_start_0": {
+        "top": 150,
+        "left": 500
+      },
+      "fcn_reportvalidation_0": {
+        "top": 211.8000030517578,
+        "left": 500
+      },
+      "fcn_login3dexperience_1719402148268_0": {
+        "top": 270.3999938964844,
+        "left": 500
+      },
+      "fcn_openexistingco_0": {
+        "top": 329,
+        "left": 500
+      },
+      "fcn_gotodetails_0": {
+        "top": 401.3000183105469,
+        "left": 495
+      },
+      "fcn_precheckreport_0": {
+        "top": 467.8999938964844,
+        "left": 503
+      },
+      "fcn_summaryreport_0": {
+        "top": 533.5,
+        "left": 507
+      },
+      "fcn_whereusedbomreport_0": {
+        "top": 313,
+        "left": 838
+      },
+      "fcn_whereusedbomreport_1720095724754_0": {
+        "top": 372.4,
+        "left": 838
+      },
+      "fcn_validatecometrics_0": {
+        "top": 430.9999938964844,
+        "left": 838
+      }
+    },
+    "settings": {
+      "maxProceedsPerPath": 10000,
+      "maxProceedDepth": 100,
+      "maxProceedsPerDepth": 1,
+      "maxProceedsForFirstDepth": 1,
+      "maxMatchingPaths": 3,
+      "maxPathRepititionsPerComboPath": 1,
+      "maxToggles": 2
+    },
+    "isPrimary": true,
+    "pathNames": [],
+    "flowChartUID": "fcUID_1719401986317",
+    "pathExecutionOrder": []
+  },
+  "enabled": true,
+  "parentId": ""
+}

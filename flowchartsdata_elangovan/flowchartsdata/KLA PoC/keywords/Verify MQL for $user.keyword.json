@@ -1,0 +1,261 @@
+{
+  "modifiedOn": "2024-07-04T10:54:05.283Z",
+  "name": "Verify MQL for $user",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-07-01T13:32:28Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Verify MQL for $user",
+    "parameters": [
+      {
+        "parameterId": "user_",
+        "entityTypeId": "user",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"add topbar-menu-item topbar-cmd enabled fonticon fonticon-plus\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_mouseOver",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"Admin\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_mouseOver",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_listItem(\"Utilities\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_mouseOver",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"TVC Utilities\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"MQL Client\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "\"/NonModalWindow/\""
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textarea(\"command\")"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "\"temp query bus \\\"Project Space\\\" \\\"\"+$user.projectName+\"\\\" * select revision dump |;\""
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_rightClick",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textarea(\"command\")"
+          },
+          {
+            "paramMode": "default"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_cell(\"Execute MQL\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_getValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textarea(\"result\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Store",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$user.projectNameResult"
+        }
+      },
+      {
+        "commented": false,
+        "action": "_wait",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "6000"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_log",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "$user.projectNameResult"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textarea(\"command\")"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "\"expand bus \\\"Project Space\\\" \\\"\"+$user.projectName+\"\\\" \"+ $user.projectNameResult.split(\"|\")[3] +\" rel Member select rel id attribute[PRoject Role].value dump | select bus where \u0027name \u003d\u003d \"+$user.username+\"\u0027;\""
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_log",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "\"expand bus \\\"Project Space\\\" \\\"\"+$user.projectName+\"\\\" \"+ $user.projectNameResult.split(\"|\")[3] +\" rel Member select rel id attribute[PRoject Role].value dump | select bus where \u0027name \u003d\u003d \"+$user.username+\"\u0027;\""
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_rightClick",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textarea(\"command\")"
+          },
+          {
+            "paramMode": "default"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_cell(\"Execute MQL\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_wait",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "6000"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_getValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textarea(\"result\")"
+          }
+        ],
+        "stepType": "Assert",
+        "stepCategory": "inbuilt",
+        "assertType": "Contains",
+        "secondaryParam": {
+          "paramMode": "string",
+          "customValue": "PR-Engineer"
+        }
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}
