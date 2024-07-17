@@ -1,0 +1,98 @@
+_focusWindow();
+_sahi.setTFCModeEnabled();
+
+
+/*Functions Start*/
+
+_include("sahi_tfc_common.flowcharts.sah");
+
+
+var $__tfcix=0;
+var $__tfc_validation=false;
+var $__tfc_callKeywordNestingDepth=0;
+var $__tfc_dataLoopReverseCounter=0;
+function _tfc_Call_REST_API() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Call_REST_API", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Call REST API", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>REST API Call</td><td>POST</td><td>http://ca1vmdev3dx2.kla-tencor.com:8070/internal/kla-services/cad/uploadtoenovia</td></tr></table>", "GROUP_START");
+  var $request_OjRGD_MYwb = new RESTRequest();
+  $request_OjRGD_MYwb.setURL("http://ca1vmdev3dx2.kla-tencor.com:8070/internal/kla-services/cad/uploadtoenovia");
+  $request_OjRGD_MYwb.setHeader("Content-Type", "application/xml");
+  $request_OjRGD_MYwb.setHeader("Accept", "application/xml");
+  $request_OjRGD_MYwb.setHeader("username", "earivazh");
+  $request_OjRGD_MYwb.setHeader("password", "enoviaKLA123");
+  var $sanitized = "<processPromotionRequest xmlns=\"http://www.orbotech.it.cad.extservices.org\">\n	<PARAMETERS>\n		<PARAMETER NAME=\"CAD_TYPE\">\n			<VALUE>PDMLINK</VALUE>\n		</PARAMETER>\n		<PARAMETER NAME=\"CAD_VAULT\">\n			<!-- C.M. = PDMLINK_ORBK_ISL for validation or connection if blank -->\n			<VALUE>ORBK</VALUE>\n			<!-- C.E. . = PDMLINK_ORBK_ISL for connection -->\n		</PARAMETER>\n		<PARAMETER NAME=\"CAD_IDENTIFIER\">\n			<VALUE>ISL</VALUE>        \n		</PARAMETER>\n		<PARAMETER NAME=\"INITIATOR\">\n			<VALUE>earivazh</VALUE>\n		</PARAMETER>\n		<PARAMETER NAME=\"ECO_NUMBER\">\n			<VALUE></VALUE>\n        </PARAMETER>\n        <PARAMETER NAME=\"NAS_SERVER\">\n			<VALUE>ISR1NAS03</VALUE>\n		</PARAMETER>\n	</PARAMETERS>\n	<MODELS>\n        <MODEL>\n			<PART_NUMBER>1200100-000</PART_NUMBER>\n			<PART_REVISION>AA</PART_REVISION>\n			<DESCRIPTION>LENS HOLDER L6 NEW AAB</DESCRIPTION>\n			<EXTERNAL_REFERENCE>VR:wt.epm.EPMDocument:1220998028</EXTERNAL_REFERENCE>\n			<FILES>\n				<FILE_NAME>1200100-000_AA.stp</FILE_NAME>   \n			</FILES>\n		</MODEL>\n   </MODELS>\n</processPromotionRequest>";
+  $request_OjRGD_MYwb.setBody($sanitized);
+  var $request_OjRGD_MYwb = $request_OjRGD_MYwb.submit("POST");
+
+  // variables
+  // assertions
+  _tfcLog("<table class='tfc_step_table'><tr><td>Assert equals</td><td>HTTP Response Status</td><td>200</td></tr></table>", "GROUP_START");
+  var $actualValue = $request_OjRGD_MYwb.getResponseCode();
+  if ($actualValue && (typeof $actualValue !== 'string')) {
+    $actualValue =  JSON.stringify($actualValue);
+  }
+  _assertEqual("200", $actualValue);
+  _tfcLog("", "GROUP_END");
+
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Log_Response() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Log_Response", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Log Response", "GROUP_START");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+
+
+/*Functions End*/
+
+
+/*Data Start*/
+
+
+var $s = {
+  "global": [{"exists" : true,"entityType" : "global","__id" : 0}]
+
+};
+
+/*Data End*/
+
+
+/*Data Overrides Start*/
+
+
+
+/*Data Overrides End*/
+
+
+/*Screens Data Start*/
+
+var $_fcScreens = {};
+
+/*Screens Data End*/
+
+
+/*Function Calls Start*/
+
+_tfc_Call_REST_API();
+_tfc_Log_Response();
+
+/*Function Calls End*/
+
