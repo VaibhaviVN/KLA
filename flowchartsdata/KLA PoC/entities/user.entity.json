@@ -1,0 +1,33 @@
+{
+  "modifiedOn": "2024-07-04T07:30:11.633Z",
+  "name": "user",
+  "id": "-1",
+  "type": 1,
+  "createdOn": "2024-07-04T01:59:45Z",
+  "content": {
+    "default": {
+      "attr_01720078211627": {
+        "name": "username",
+        "accessors": [
+          {
+            "id": "acc0",
+            "name": "Username Input",
+            "accessor": "_textbox(\"personName\")",
+            "messageAccessor": ""
+          }
+        ],
+        "type": "text",
+        "props": {
+          "prefix": "larumug",
+          "min-length": "0",
+          "max-length": "0"
+        },
+        "invalidData": [],
+        "validData": []
+      }
+    },
+    "specific": []
+  },
+  "enabled": false,
+  "parentId": ""
+}

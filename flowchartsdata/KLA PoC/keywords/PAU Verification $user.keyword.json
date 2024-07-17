@@ -1,0 +1,217 @@
+{
+  "modifiedOn": "2024-07-04T10:00:51.555Z",
+  "name": "PAU Verification $user",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-07-02T22:22:05Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "PAU Verification $user",
+    "parameters": [
+      {
+        "parameterId": "user_",
+        "entityTypeId": "user",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_label(\"Manage Users in a Single Project...\")"
+          },
+          {
+            "paramMode": "default"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "\"/NonModalWindow/\""
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textbox(\"projectName\")"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "orbk"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action",
+        "blurDisableCheck": true
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"ORBK ERC Eng ISL\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_getText",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"ORBK ERC Eng ISL\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Store",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$user.projectName"
+        }
+      },
+      {
+        "commented": false,
+        "action": "_log",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "$user.projectName"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "default",
+            "parameterId": "user_",
+            "attributeId": "attr_01720078211627",
+            "accessorId": "acc0"
+          },
+          {
+            "paramMode": "default",
+            "parameterId": "user_",
+            "attributeId": "attr_01720078211627"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action",
+        "blurDisableCheck": true
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"larumug - Loganatan, Arumugam\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_button(\"Add/Get Persons\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_check",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_checkbox(0, _near(_cell(\"larumug\")))"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_check",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_checkbox(0, _rightOf(_cell(\"larumug\")),_under(_tableHeader(\"APPROVE\")))"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_check",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_checkbox(0, _rightOf(_cell(\"larumug\")),_under(_tableHeader(\"ENGR\")))"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_button(\"Update Selected\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_button(\"Close\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

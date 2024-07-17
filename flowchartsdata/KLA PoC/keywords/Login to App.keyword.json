@@ -1,0 +1,54 @@
+{
+  "modifiedOn": "2024-06-25T08:43:51.254Z",
+  "name": "Login to App",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-24T13:08:04Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Login to App",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "customValue": "_textbox(\"username\")",
+            "paramMode": "code"
+          },
+          {
+            "customValue": "earivazh",
+            "paramMode": "string"
+          }
+        ]
+      },
+      {
+        "commented": false,
+        "action": "_setPassword",
+        "stepParameters": [
+          {
+            "customValue": "_password(\"password\")",
+            "paramMode": "code"
+          },
+          {
+            "customValue": "enoviaKLA123",
+            "paramMode": "string"
+          }
+        ]
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "customValue": "_submit(\"Log in\")",
+            "paramMode": "code"
+          }
+        ]
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

@@ -1,0 +1,147 @@
+{
+  "modifiedOn": "2024-07-04T07:12:50.413Z",
+  "name": "Export $part EBOM",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-07-03T08:16:25Z",
+  "content": {
+    "title": "Export $part EBOM",
+    "parameters": [
+      {
+        "parameterId": "part_",
+        "entityTypeId": "part",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "stepParameters": [
+          {
+            "customValue": "_link(\"EBOM\")",
+            "paramMode": "code"
+          },
+          {
+            "customValue": "",
+            "paramMode": "default"
+          }
+        ],
+        "action": "_click",
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_italic(\"dropdown icon drop\",_in(_div(\"item export link type-buttondrop\")))"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_setSelected",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_select(\"exp_format\")"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "Excel"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_setSelected",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_select(\"exp_exportToZIP\")"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "No"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_submit(\"Export\")"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_wait",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "90000"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_lastDownloadedFileName()!\u003dnull"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_saveDownloadedAs",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "C:\\\\Users\\\\larumug\\\\sahi_pro\\\\userdata\\\\ExportedData\\\\KMATProductFeatureGroup200386766-000revAB.xls"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": true,
+        "action": "_readExcelFile",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "C:\\\\Users\\\\larumug\\\\sahi_pro\\\\userdata\\\\ExportedData\\\\KMATProductFeatureGroup200386766-000revAB.xls"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "KMAT Product Feature Group, 038"
+          }
+        ],
+        "stepType": "Store",
+        "stepCategory": "inbuilt",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$part.exportedData"
+        }
+      },
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "var $data \u003d _readExcelFile(\"C:\\\\Users\\\\larumug\\\\sahi_pro\\\\userdata\\\\ExportedData\\\\KMATProductFeatureGroup200386766-000revAB.xls\",\"KMAT Product Feature Group, 038\", {includeHeader:false,ignoreEmptyRows:true});\n\nvar $Objects \u003d _count(\"_table\",\"/.*/\",_under(_parentNode(_row(\"Object\"),\"TH\"),50),_in(_table(\"tbr\")))\n\nvar $indexOfName \u003d $data[0].indexOf(\"Name\");\nvar $indexOfFN \u003d$data[0].indexOf(\"F/N\");\nvar $partObject\u003d[];\nfor(var $i\u003d0; $i\u003c$Objects;$i++){\n//$partObject.push(_getText(_link(0, _in(_table($i,_under(_parentNode(_row(\"Object\"),\"TH\"),50),_in(_table(\"tbr\")))))))\n_assertEqual($data[$i+1][$indexOfName] , _getText(_link(0, _in(_table($i,_under(_parentNode(_row(\"Object\"),\"TH\"),50),_in(_table(\"tbr\")))))));\n_assertEqual($data[$i+1][$indexOfFN] , _getText(_cell($i,_under(_parentNode(_row(\"F/N\"),\"TH\"),10),_in(_table(\"tbr\")))).replace(/^0+/,\u0027\u0027));\n}\n"
+      }
+    ],
+    "isSystemKeyword": false
+  },
+  "enabled": false,
+  "parentId": ""
+}

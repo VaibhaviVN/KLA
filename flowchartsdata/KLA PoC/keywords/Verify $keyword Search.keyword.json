@@ -1,0 +1,198 @@
+{
+  "modifiedOn": "2024-07-16T09:48:37.774Z",
+  "name": "Verify $keyword Search",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-07-06T02:37:45Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Verify $keyword Search",
+    "parameters": [
+      {
+        "parameterId": "keyword_",
+        "entityTypeId": "keyword",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "var $testcase \u003d _testcase(\"TC_VerifyKeyword\",\"VerifyKeyword\");\n$testcase.start();"
+      },
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "\"/ModalDialog/\""
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_collectAttributes",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "_cell"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "/c/"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "sahiText"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_under(_parentNode(_row(\"Type\"),\"TH\"),20)"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Store",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$TypeArray"
+        }
+      },
+      {
+        "commented": false,
+        "action": "_collectAttributes",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "_cell"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "/c/"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "sahiText"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_under(_parentNode(_row(\"State\"),\"TH\"),20)"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Store",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$StateArray"
+        }
+      },
+      {
+        "commented": false,
+        "action": "_collectAttributes",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "_cell"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "/c/"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "sahiText"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_under(_parentNode(_row(\"Project\"),\"TH\"),20)"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Store",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$ProjectArray"
+        }
+      },
+      {
+        "commented": false,
+        "action": "_collectAttributes",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "_cell"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "/c/"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "sahiText"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_under(_parentNode(_row(\"Owner\"),\"TH\"),20)"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Store",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$OwnerArray"
+        }
+      },
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "_log(\"In the loop\");\n_log(\"Length of an array \"+ $TypeArray.length);\n_log($TypeArray);\n_log($StateArray);\n_log($ProjectArray);\n_log($OwnerArray);\n_log($keyword.newproject);\nfor(var $i\u003d0;$i\u003c$TypeArray.length;$i++){\n_assertEqual($keyword.partType, $TypeArray[$i]);\n_assertEqual($keyword.state, $StateArray[$i]);\n_assertEqual($keyword.newproject, $ProjectArray[$i]);\n_assert($OwnerArray[$i].indexOf($keyword.owner)!\u003d-1);\n\n}"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_italic(\"icon-type-font-icon ti-c ti-table-c\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_label(\"Part Information\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_exists",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"Part Information\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Assert",
+        "assertType": "Is_True"
+      },
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "$testcase.end();"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

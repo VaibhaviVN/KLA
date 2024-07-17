@@ -1,0 +1,168 @@
+{
+  "modifiedOn": "2024-07-11T10:18:09.811Z",
+  "name": "My Tasks",
+  "id": "-1",
+  "type": 0,
+  "createdOn": "2024-07-08T10:00:39Z",
+  "content": {
+    "nodesMap": {
+      "fcn_start_0": {
+        "id": "fcn_start_0",
+        "content": "Start",
+        "nodeType": "start",
+        "branches": [
+          "fcn_mytasks_0",
+          "fcn_verifygraphvalues_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_mytasks_0": {
+        "id": "fcn_mytasks_0",
+        "content": "My Tasks",
+        "nodeType": "pathlabel",
+        "branches": [
+          "fcn_login3dexperience_1720531866660_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_login3dexperience_1720531866660_0": {
+        "id": "fcn_login3dexperience_1720531866660_0",
+        "content": "Login 3d Experience",
+        "nodeType": "action",
+        "branches": [
+          "fcn_gotodashboard_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_gotodashboard_0": {
+        "id": "fcn_gotodashboard_0",
+        "content": "Go To DashBoard",
+        "nodeType": "action",
+        "branches": [
+          "fcn_getactivetask_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_gototvchomepage_0": {
+        "id": "fcn_gototvchomepage_0",
+        "content": "Go To TVC Home",
+        "nodeType": "action",
+        "branches": [
+          "fcn_verifyactivetask_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_getactivetask_0": {
+        "id": "fcn_getactivetask_0",
+        "content": "Get Active $task",
+        "nodeType": "action",
+        "branches": [
+          "fcn_gototvchomepage_0"
+        ],
+        "dataSetId": -1
+      },
+      "fcn_verifyactivetask_0": {
+        "id": "fcn_verifyactivetask_0",
+        "content": "Verify Active $task",
+        "nodeType": "state",
+        "branches": [],
+        "dataSetId": -1
+      },
+      "fcn_verifygraphvalues_0": {
+        "id": "fcn_verifygraphvalues_0",
+        "content": "Verify Graph Values",
+        "nodeType": "pathlabel",
+        "branches": [
+          "fcn_login3dexperience_0"
+        ],
+        "dataSetId": -1
+      },
+      "fcn_getcoprojectcount_0": {
+        "id": "fcn_getcoprojectcount_0",
+        "content": "Get $co Project Count",
+        "nodeType": "action",
+        "branches": [
+          "fcn_verifycoprojectcount_0"
+        ],
+        "dataSetId": -1
+      },
+      "fcn_login3dexperience_0": {
+        "id": "fcn_login3dexperience_0",
+        "content": "Login 3d Experience",
+        "nodeType": "action",
+        "branches": [
+          "fcn_getcoprojectcount_0"
+        ],
+        "dataSetId": -1
+      },
+      "fcn_verifycoprojectcount_0": {
+        "id": "fcn_verifycoprojectcount_0",
+        "content": "Verify $co Project Count",
+        "nodeType": "state",
+        "branches": [],
+        "dataSetId": -1
+      }
+    },
+    "positions": {
+      "fcn_start_0": {
+        "top": 150,
+        "left": 500
+      },
+      "fcn_mytasks_0": {
+        "top": 211.8000030517578,
+        "left": 500
+      },
+      "fcn_login3dexperience_1720531866660_0": {
+        "top": 270.3999938964844,
+        "left": 500
+      },
+      "fcn_gotodashboard_0": {
+        "top": 329,
+        "left": 500
+      },
+      "fcn_getactivetask_0": {
+        "top": 387.6000061035156,
+        "left": 500
+      },
+      "fcn_gototvchomepage_0": {
+        "top": 457.6000061035156,
+        "left": 501
+      },
+      "fcn_verifyactivetask_0": {
+        "top": 516.2000122070312,
+        "left": 501
+      },
+      "fcn_verifygraphvalues_0": {
+        "top": 211.8000030517578,
+        "left": 780
+      },
+      "fcn_login3dexperience_0": {
+        "top": 270.3999938964844,
+        "left": 780
+      },
+      "fcn_getcoprojectcount_0": {
+        "top": 327.3999938964844,
+        "left": 783
+      },
+      "fcn_verifycoprojectcount_0": {
+        "top": 392.54999389648435,
+        "left": 783
+      }
+    },
+    "settings": {
+      "maxProceedsPerPath": 10000,
+      "maxProceedDepth": 100,
+      "maxProceedsPerDepth": 1,
+      "maxProceedsForFirstDepth": 1,
+      "maxMatchingPaths": 3,
+      "maxPathRepititionsPerComboPath": 1,
+      "maxToggles": 2
+    },
+    "isPrimary": true,
+    "pathNames": [],
+    "flowChartUID": "fcUID_1720531833674",
+    "pathExecutionOrder": []
+  },
+  "enabled": true,
+  "parentId": ""
+}

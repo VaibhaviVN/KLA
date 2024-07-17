@@ -1,0 +1,115 @@
+{
+  "modifiedOn": "2024-06-27T05:38:32.094Z",
+  "name": "Workflow Approver Selection for $part and $changeorder",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-25T17:23:17Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Workflow Approver Selection for $part and $changeorder",
+    "parameters": [
+      {
+        "parameterId": "part_",
+        "entityTypeId": "part",
+        "suffix": ""
+      },
+      {
+        "parameterId": "changeorder_",
+        "entityTypeId": "changeorder",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_link(\"Approvals-Actions\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_submit(\"Edit\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textbox(0, _rightOf(_label(\"Dev Engineer(s)\")))"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "fer"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"option active\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_radio(\"All as Parallel Approval\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_button(\"View\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": true,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_image(\"iconActionPromote.png\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

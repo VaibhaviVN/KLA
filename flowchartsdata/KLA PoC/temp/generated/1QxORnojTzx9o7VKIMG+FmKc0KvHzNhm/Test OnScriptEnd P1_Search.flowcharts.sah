@@ -1,0 +1,52 @@
+
+
+/*Functions Start*/
+
+_include("sahi_tfc_common.flowcharts.sah");
+
+
+var $__tfcix=0;
+var $__tfc_validation=false;
+function _tfc_Log_Test() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Log_Test", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Log test", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_log</td><td>test</td></tr></table>", "GROUP_START");
+  _log("test");
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+
+
+/*Functions End*/
+
+
+/*Data Start*/
+
+var $s = {"global" : [{"exists" : true,"entityType" : "global","__id" : 0}]}
+
+/*Data End*/
+
+
+/*Data Overrides Start*/
+
+
+
+/*Data Overrides End*/
+
+
+
+/*Function Calls Start*/
+
+_tfc_Log_Test();
+
+/*Function Calls End*/
+

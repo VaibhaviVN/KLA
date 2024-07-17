@@ -1,0 +1,5 @@
+{"flowcharts" : {"Registration" : "flowcharts/Registration.flowchart.json","Shopping Cart" : "flowcharts/Shopping Cart.flowchart.json"},
+"keywords" : {"Enter $user details" : "keywords/Enter $user details.keyword.json","Verify item added to cart" : "keywords/Verify item added to cart.keyword.json","Go To Registration Page" : "keywords/Go To Registration Page.keyword.json","Add item to cart" : "keywords/Add item to cart.keyword.json","Go to Product page" : "keywords/Go to Product page.keyword.json","Logout" : "keywords/Logout.keyword.json","Confirm Registration" : "keywords/Confirm Registration.keyword.json"},
+"entities" : {"user" : "entities/user.entity.json"},
+"screens" : {},
+"datasets" : {"Registration Data.csv" : "datasets/Registration Data.csv","user_details.csv" : "datasets/user_details.csv"}}

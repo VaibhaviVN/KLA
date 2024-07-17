@@ -1,0 +1,115 @@
+_focusWindow();
+_sahi.setTFCModeEnabled();
+
+
+/*Functions Start*/
+
+_include("sahi_tfc_common.flowcharts.sah");
+
+
+var $__tfcix=0;
+var $__tfc_validation=false;
+function _tfc_Login_3d_Experience() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Login_3d_Experience", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Login 3d Experience", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(\"username\")</td><td>earivazh</td></tr></table>", "GROUP_START");
+  _setValue(_textbox("username"), "earivazh");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setPassword</td><td>_password(\"password\")</td><td>\"*****\"</td></tr></table>", "GROUP_START");
+  _setPassword(_password("password"), "enoviaKLA123", true);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_submit(\"Log in\")</td></tr></table>", "GROUP_START");
+  _click(_submit("Log in"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_windowAction</td><td>maximize</td></tr></table>", "GROUP_START");
+  _windowAction("maximize");
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Go_To_DashBoard() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Go_To_DashBoard", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Go To DashBoard", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_label(\"Dashboard\")</td></tr></table>", "GROUP_START");
+  _click(_label("Dashboard"));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Go_To_TVC_Home() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Go_To_TVC_Home", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Go To TVC Home", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_label(\"TVC Home\")</td></tr></table>", "GROUP_START");
+  _click(_label("TVC Home"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"My Tasks\")</td></tr></table>", "GROUP_START");
+  _click(_link("My Tasks"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Active Tasks\")</td></tr></table>", "GROUP_START");
+  _click(_link("Active Tasks"));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+
+
+/*Functions End*/
+
+
+/*Data Start*/
+
+var $s = {"global" : [{"exists" : true,"entityType" : "global","__id" : 0}]}
+
+/*Data End*/
+
+
+/*Data Overrides Start*/
+
+
+
+/*Data Overrides End*/
+
+
+
+/*Function Calls Start*/
+
+_tfc_Login_3d_Experience();
+_tfc_Go_To_DashBoard();
+_tfc_Go_To_TVC_Home();
+
+/*Function Calls End*/
+

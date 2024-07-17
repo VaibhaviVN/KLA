@@ -1,0 +1,28 @@
+{
+  "modifiedOn": "2024-07-09T13:39:45.018Z",
+  "name": "Go To DashBoard",
+  "id": "0",
+  "type": 3,
+  "createdOn": "2024-07-09T13:39:45.018Z",
+  "content": {
+    "title": "Go To DashBoard",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_label(\"Dashboard\")"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      }
+    ],
+    "isSystemKeyword": false
+  },
+  "enabled": false,
+  "parentId": ""
+}

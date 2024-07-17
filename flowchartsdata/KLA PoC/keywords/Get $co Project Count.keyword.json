@@ -1,0 +1,62 @@
+{
+  "modifiedOn": "2024-07-11T10:17:39.573Z",
+  "name": "Get $co Project Count",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-07-11T04:42:29Z",
+  "content": {
+    "title": "Get $co Project Count",
+    "parameters": [
+      {
+        "parameterId": "co_",
+        "entityTypeId": "co",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_mouseOver",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_svg_path(0, _near(_svg_tspan(\"WIN 7XXX\")))"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_getText",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"/apexcharts-tooltip-text-y-value/\",_in(_div(\"apexcharts-tooltip-y-group\")))"
+          }
+        ],
+        "stepType": "Store",
+        "stepCategory": "inbuilt",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$co.projectCount"
+        }
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_svg_path(0, _near(_svg_tspan(\"WIN 7XXX\")))"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      }
+    ],
+    "isSystemKeyword": false
+  },
+  "enabled": false,
+  "parentId": ""
+}

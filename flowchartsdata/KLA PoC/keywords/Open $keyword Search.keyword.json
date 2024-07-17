@@ -1,0 +1,268 @@
+{
+  "modifiedOn": "2024-07-16T09:48:09.728Z",
+  "name": "Open $keyword Search",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-26T21:22:32Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Open $keyword Search",
+    "parameters": [
+      {
+        "parameterId": "keyword_",
+        "entityTypeId": "keyword",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "var $testcase \u003d _testcase(\"TC_Openkeyword\",\"Open Keyword\");\n$testcase.start();"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"add topbar-menu-item topbar-cmd enabled fonticon fonticon-plus\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"Keyword Search\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "\"/ModalDialog/\""
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"/dropdown-indicator/\", _near(_span(\"Type\")))"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"Part\", _near(_span(\"Type\")))"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "default",
+            "parameterId": "keyword_",
+            "attributeId": "attr_01720430807471",
+            "accessorId": "acc0"
+          },
+          {
+            "paramMode": "default",
+            "parameterId": "keyword_",
+            "attributeId": "attr_01720430807471"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action",
+        "blurDisableCheck": true
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"react-select-2-option-0\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "default",
+            "parameterId": "keyword_",
+            "attributeId": "attr_31720435097963",
+            "accessorId": "acc0"
+          },
+          {
+            "paramMode": "default",
+            "parameterId": "keyword_",
+            "attributeId": "attr_41720435578010"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action",
+        "blurDisableCheck": true
+      },
+      {
+        "commented": false,
+        "action": "_wait",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "1000"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"react-select-3-option-0\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_check",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_checkbox($keyword.state)"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "default",
+            "parameterId": "keyword_",
+            "attributeId": "attr_21720430807471",
+            "accessorId": "acc0"
+          },
+          {
+            "paramMode": "default",
+            "parameterId": "keyword_",
+            "attributeId": "attr_21720430807471"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action",
+        "blurDisableCheck": true
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"Arivazhagan, Elangovan\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textbox(\"Start Date\")"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "07/01/2024"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textbox(\"End Date\")"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "07/08/2024"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_submit(\"Search\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_wait",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "9000"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "$testcase.end();"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

@@ -1,0 +1,82 @@
+{
+  "modifiedOn": "2024-07-16T09:47:28.163Z",
+  "name": "Login 3d Experience",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-20T22:42:13Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Login 3d Experience",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "var $testcase \u003d _testcase(\"TC_Login\",\"Login Testcase\");\n$testcase.start();"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textbox(\"username\")"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "earivazh"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setPassword",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_password(\"password\")"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "enoviaKLA123"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_submit(\"Log in\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_windowAction",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "maximize"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "$testcase.end();"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

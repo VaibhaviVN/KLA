@@ -1,0 +1,244 @@
+{
+  "modifiedOn": "2024-07-10T07:28:37.476Z",
+  "name": "Reports Validation",
+  "id": "-1",
+  "type": 0,
+  "createdOn": "2024-06-17T18:40:47Z",
+  "content": {
+    "nodesMap": {
+      "fcn_start_0": {
+        "id": "fcn_start_0",
+        "content": "Start",
+        "nodeType": "start",
+        "branches": [
+          "fcn_reportvalidation_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_reportvalidation_0": {
+        "id": "fcn_reportvalidation_0",
+        "content": "Report Validation",
+        "nodeType": "pathlabel",
+        "branches": [
+          "fcn_login3dexperience_1719402148268_0",
+          "fcn_summaryreport_1"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_login3dexperience_1719402148268_0": {
+        "id": "fcn_login3dexperience_1719402148268_0",
+        "content": "Login 3d Experience",
+        "nodeType": "action",
+        "branches": [
+          "fcn_openexistingco_0",
+          "fcn_cometricsreport_0",
+          "fcn_whereusedbomreport_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_precheckreport_0": {
+        "id": "fcn_precheckreport_0",
+        "content": "Precheck Report",
+        "nodeType": "action",
+        "branches": [],
+        "dataSetId": "-1"
+      },
+      "fcn_summaryreport_0": {
+        "id": "fcn_summaryreport_0",
+        "content": "Summary Report",
+        "nodeType": "action",
+        "branches": [
+          "fcn_dddddd_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_openexistingco_0": {
+        "id": "fcn_openexistingco_0",
+        "content": "Open Existing $co",
+        "nodeType": "action",
+        "branches": [
+          "fcn_precheckreport_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_validatecometrics_0": {
+        "id": "fcn_validatecometrics_0",
+        "content": "Validate $co_metrics Report",
+        "nodeType": "state",
+        "branches": [],
+        "dataSetId": "-1"
+      },
+      "fcn_cometricsreport_0": {
+        "id": "fcn_cometricsreport_0",
+        "content": "CO Metrics Report",
+        "nodeType": "pathsublabel",
+        "branches": [
+          "fcn_opencometricsreport_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_opencometricsreport_0": {
+        "id": "fcn_opencometricsreport_0",
+        "content": "Open $co_metrics Report",
+        "nodeType": "action",
+        "branches": [
+          "fcn_validatecometrics_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_whereusedbomreport_0": {
+        "id": "fcn_whereusedbomreport_0",
+        "content": "Where used BOM Report",
+        "nodeType": "pathsublabel",
+        "branches": [
+          "fcn_whereusedbomreport_1"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_whereusedbomreport_1": {
+        "id": "fcn_whereusedbomreport_1",
+        "content": "Where Used BOM Report",
+        "nodeType": "action",
+        "branches": [
+          "fcn_verifywhereusedbomreport_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_verifywhereusedbomreport_0": {
+        "id": "fcn_verifywhereusedbomreport_0",
+        "content": "Verify where used BOM Report",
+        "nodeType": "state",
+        "branches": [],
+        "dataSetId": "-1"
+      },
+      "fcn_summaryreport_1": {
+        "id": "fcn_summaryreport_1",
+        "content": "Summary Report",
+        "nodeType": "pathsublabel",
+        "branches": [
+          "fcn_login3dexperience_0"
+        ],
+        "dataSetId": -1
+      },
+      "fcn_login3dexperience_0": {
+        "id": "fcn_login3dexperience_0",
+        "content": "Login 3d Experience",
+        "nodeType": "action",
+        "branches": [
+          "fcn_openexistingco_1"
+        ],
+        "dataSetId": -1
+      },
+      "fcn_openexistingco_1": {
+        "id": "fcn_openexistingco_1",
+        "content": "Open Existing $co",
+        "nodeType": "action",
+        "branches": [
+          "fcn_getsummaryreportdata_0"
+        ],
+        "dataSetId": -1
+      },
+      "fcn_getsummaryreportdata_0": {
+        "id": "fcn_getsummaryreportdata_0",
+        "content": "Get Summary Report Data",
+        "nodeType": "action",
+        "branches": [
+          "fcn_summaryreport_0"
+        ],
+        "dataSetId": -1
+      },
+      "fcn_dddddd_0": {
+        "id": "fcn_dddddd_0",
+        "content": "dddddd",
+        "nodeType": "action",
+        "branches": [],
+        "dataSetId": -1
+      }
+    },
+    "positions": {
+      "fcn_start_0": {
+        "top": 150,
+        "left": 500
+      },
+      "fcn_reportvalidation_0": {
+        "top": 211.80000114440918,
+        "left": 500
+      },
+      "fcn_login3dexperience_1719402148268_0": {
+        "top": 270.4000015258789,
+        "left": 500
+      },
+      "fcn_openexistingco_0": {
+        "top": 329,
+        "left": 500
+      },
+      "fcn_precheckreport_0": {
+        "top": 417.90000915527344,
+        "left": 505
+      },
+      "fcn_cometricsreport_0": {
+        "top": 305,
+        "left": 826
+      },
+      "fcn_opencometricsreport_0": {
+        "top": 406,
+        "left": 839
+      },
+      "fcn_validatecometrics_0": {
+        "top": 516,
+        "left": 834
+      },
+      "fcn_whereusedbomreport_0": {
+        "top": 305,
+        "left": 1106
+      },
+      "fcn_whereusedbomreport_1": {
+        "top": 363.6000061035156,
+        "left": 1106
+      },
+      "fcn_verifywhereusedbomreport_0": {
+        "top": 422.1999969482422,
+        "left": 1106
+      },
+      "fcn_summaryreport_1": {
+        "top": 269.4000015258789,
+        "left": 194
+      },
+      "fcn_login3dexperience_0": {
+        "top": 328,
+        "left": 194
+      },
+      "fcn_openexistingco_1": {
+        "top": 386.6000061035156,
+        "left": 194
+      },
+      "fcn_getsummaryreportdata_0": {
+        "top": 481.5,
+        "left": 195
+      },
+      "fcn_summaryreport_0": {
+        "top": 571.5,
+        "left": 198
+      },
+      "fcn_dddddd_0": {
+        "top": 684.1000061035156,
+        "left": 201
+      }
+    },
+    "settings": {
+      "maxProceedDepth": 100,
+      "maxProceedsForFirstDepth": 1,
+      "maxProceedsPerDepth": 1,
+      "maxPathRepititionsPerComboPath": 1,
+      "maxProceedsPerPath": 10000,
+      "maxToggles": 2,
+      "maxMatchingPaths": 3
+    },
+    "isPrimary": true,
+    "pathNames": [],
+    "flowChartUID": "fcUID_1719401986317",
+    "pathExecutionOrder": []
+  },
+  "enabled": true,
+  "parentId": ""
+}

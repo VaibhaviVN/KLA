@@ -1,0 +1,52 @@
+{
+  "modifiedOn": "2024-07-09T13:41:03.703Z",
+  "name": "Go To TVC Home",
+  "id": "0",
+  "type": 3,
+  "createdOn": "2024-07-09T13:41:03.703Z",
+  "content": {
+    "title": "Go To TVC Home",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_label(\"TVC Home\")"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_link(\"My Tasks\")"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_link(\"Active Tasks\")"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      }
+    ],
+    "isSystemKeyword": false
+  },
+  "enabled": false,
+  "parentId": ""
+}

@@ -1,0 +1,55 @@
+{
+  "modifiedOn": "2024-07-04T10:35:18.425Z",
+  "name": "Test Dummy $user",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-07-03T01:26:13Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Test Dummy $user",
+    "parameters": [
+      {
+        "parameterId": "user_",
+        "entityTypeId": "user",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "\"/NonModalWindow/\""
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "$user.projectName\u003d\"ORBK ERC Eng ISL\"\n$user.username\u003d\"larumug\"\n$user.projectNameResult\u003d\"Project Space|ORBK ERC Eng ISL|21681506491353|21681506491353\""
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textarea(\"command\")"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "\"expand bus \\\"Project Space\\\" \\\"\"+$user.projectName+\"\\\" \"+ $user.projectNameResult.split(\"|\")[3] +\" rel Member select rel id attribute[PRoject Role].value dump | select bus where \u0027name \u003d\u003d \"+$user.username+\"\u0027;\""
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

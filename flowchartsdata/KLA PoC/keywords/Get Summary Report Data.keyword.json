@@ -1,0 +1,155 @@
+{
+  "modifiedOn": "2024-07-10T06:55:11.141Z",
+  "name": "Get Summary Report Data",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-07-09T08:37:04Z",
+  "content": {
+    "title": "Get Summary Report Data",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "/blank/"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "stepParameters": [
+          {
+            "customValue": "_link(\"All Affected Items\")",
+            "paramMode": "code"
+          },
+          {
+            "customValue": "",
+            "paramMode": "default"
+          }
+        ],
+        "action": "_click",
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "stepParameters": [
+          {
+            "customValue": "_image(\"iconNewWindow.gif[1]\", _near(_cell(\"0353040-000[3]\")))",
+            "paramMode": "code"
+          },
+          {
+            "customValue": "",
+            "paramMode": "default"
+          }
+        ],
+        "action": "_click",
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "/parentOID/"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "stepParameters": [
+          {
+            "customValue": "_link(\"BOM Compare\")",
+            "paramMode": "code"
+          },
+          {
+            "customValue": "",
+            "paramMode": "default"
+          }
+        ],
+        "action": "_click",
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "stepParameters": [
+          {
+            "customValue": "_link(\"Changes Only\")",
+            "paramMode": "code"
+          },
+          {
+            "customValue": "",
+            "paramMode": "default"
+          }
+        ],
+        "action": "_click",
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_getText",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_cell(1, _under(_parentNode(_row(\"Previous[1]\"),\"TH\"),20))"
+          }
+        ],
+        "stepType": "Store",
+        "stepCategory": "inbuilt",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$FNPrevious"
+        }
+      },
+      {
+        "commented": false,
+        "action": "_getText",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_cell(1, _under(_parentNode(_row(\"Previous[2]\"),\"TH\"),20))"
+          }
+        ],
+        "stepType": "Store",
+        "stepCategory": "inbuilt",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$PartPrevious"
+        }
+      },
+      {
+        "commented": false,
+        "action": "_closeWindow",
+        "stepParameters": [],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "/blank/"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      }
+    ],
+    "isSystemKeyword": false
+  },
+  "enabled": false,
+  "parentId": ""
+}

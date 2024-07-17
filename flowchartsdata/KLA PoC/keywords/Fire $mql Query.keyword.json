@@ -1,0 +1,215 @@
+{
+  "modifiedOn": "2024-07-05T10:50:51.262Z",
+  "name": "Fire $mql Query",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-28T06:07:55Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Fire $mql Query",
+    "parameters": [
+      {
+        "parameterId": "mql_",
+        "entityTypeId": "mql",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"add topbar-menu-item topbar-cmd enabled fonticon fonticon-plus\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_mouseOver",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"Admin\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_mouseOver",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_listItem(\"Utilities\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_mouseOver",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"TVC Utilities\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"MQL Client\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "\"/NonModalWindow/\""
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_log",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "$partMCONumber"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textarea(\"command\")"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "\"expand bus \\\"Part Master\\\" 290068 Part rel MBOM select rel attribute[MBOM End Date].value where \u0027attribute[MCO-Out].value \u003d\u003d \\\"\"+$partMCONumber+\"\\\"\u0027dump | \""
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_rightClick",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textarea(\"command\")"
+          },
+          {
+            "paramMode": "default"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_cell(\"Execute MQL\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_wait",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "90000"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_getValue(_textarea(\"result\"))!\u003dnull"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_getValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textarea(\"result\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Store",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$MQLCommandValue"
+        }
+      },
+      {
+        "commented": false,
+        "action": "_log",
+        "stepParameters": [
+          {
+            "paramMode": "default"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "$MQLCommandValue"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_link(\"Close\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

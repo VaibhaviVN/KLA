@@ -1,0 +1,91 @@
+{
+  "modifiedOn": "2024-07-03T11:08:38.131Z",
+  "name": "Upload Download PoC",
+  "id": "-1",
+  "type": 0,
+  "createdOn": "2024-07-02T00:51:23Z",
+  "content": {
+    "nodesMap": {
+      "fcn_start_0": {
+        "id": "fcn_start_0",
+        "content": "Start",
+        "nodeType": "start",
+        "branches": [
+          "fcn_uploaddownloadtest_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_uploaddownloadtest_0": {
+        "id": "fcn_uploaddownloadtest_0",
+        "content": "Upload Download Test",
+        "nodeType": "pathlabel",
+        "branches": [
+          "fcn_login3dexperience_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_login3dexperience_0": {
+        "id": "fcn_login3dexperience_0",
+        "content": "Login 3d Experience",
+        "nodeType": "action",
+        "branches": [
+          "fcn_createpart_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_createpart_0": {
+        "id": "fcn_createpart_0",
+        "content": "Create $part",
+        "nodeType": "action",
+        "branches": [
+          "fcn_dummy_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_dummy_0": {
+        "id": "fcn_dummy_0",
+        "content": "Test File Upload Download",
+        "nodeType": "action",
+        "branches": [],
+        "dataSetId": "-1"
+      }
+    },
+    "positions": {
+      "fcn_start_0": {
+        "top": 150,
+        "left": 500
+      },
+      "fcn_uploaddownloadtest_0": {
+        "top": 211,
+        "left": 500
+      },
+      "fcn_login3dexperience_0": {
+        "top": 269.6000061035156,
+        "left": 500
+      },
+      "fcn_createpart_0": {
+        "top": 327.20001220703125,
+        "left": 500
+      },
+      "fcn_dummy_0": {
+        "top": 393.3500061035156,
+        "left": 500
+      }
+    },
+    "settings": {
+      "maxProceedsPerPath": 10000,
+      "maxProceedDepth": 100,
+      "maxProceedsPerDepth": 1,
+      "maxProceedsForFirstDepth": 1,
+      "maxMatchingPaths": 3,
+      "maxPathRepititionsPerComboPath": 1,
+      "maxToggles": 2
+    },
+    "isPrimary": true,
+    "pathNames": [],
+    "flowChartUID": "fcUID_1720000272615",
+    "pathExecutionOrder": []
+  },
+  "enabled": true,
+  "parentId": ""
+}

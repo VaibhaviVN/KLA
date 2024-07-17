@@ -1,0 +1,96 @@
+{
+  "modifiedOn": "2024-07-11T10:05:56.882Z",
+  "name": "Verify Active $task",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-07-10T06:31:14Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Verify Active $task",
+    "parameters": [
+      {
+        "parameterId": "task_",
+        "entityTypeId": "task",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_italic(\"dropdown icon\")"
+          },
+          {
+            "paramMode": "default"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"150\")"
+          },
+          {
+            "paramMode": "default"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_collectAttributes",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "_link"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "/Object/"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "sahiText"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_under(_tableHeader(\"Related Obj.\"))"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Store",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$task.myactiveTasks"
+        }
+      },
+      {
+        "commented": false,
+        "action": "_areEqual",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "$task.activeTasks"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "$task.myactiveTasks"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "None"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

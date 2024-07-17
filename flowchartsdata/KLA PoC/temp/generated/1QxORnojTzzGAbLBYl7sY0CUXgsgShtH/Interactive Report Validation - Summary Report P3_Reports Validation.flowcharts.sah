@@ -1,0 +1,241 @@
+_tfcLog("<div style='font-weight:bolder; font-size:15px;'>SubLabels : Summary Report</div>", "RAW")
+
+_focusWindow();
+_sahi.setTFCModeEnabled();
+
+
+/*Functions Start*/
+
+_include("sahi_tfc_common.flowcharts.sah");
+
+
+var $__tfcix=0;
+var $__tfc_validation=false;
+function _tfc_Login_3d_Experience() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Login_3d_Experience", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Login 3d Experience", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(\"username\")</td><td>earivazh</td></tr></table>", "GROUP_START");
+  _setValue(_textbox("username"), "earivazh");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setPassword</td><td>_password(\"password\")</td><td>\"*****\"</td></tr></table>", "GROUP_START");
+  _setPassword(_password("password"), "enoviaKLA123", true);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_submit(\"Log in\")</td></tr></table>", "GROUP_START");
+  _click(_submit("Log in"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_windowAction</td><td>maximize</td></tr></table>", "GROUP_START");
+  _windowAction("maximize");
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Open_Existing_Co($co) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Open_Existing_Co", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Open Existing $co", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(\"quickSearch\")</td><td>D70127</td></tr></table>", "GROUP_START");
+  _setValue(_textbox("quickSearch"), "D70127");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_keyPress</td><td>_textbox(\"quickSearch\")</td><td>[13,13]</td></tr></table>", "GROUP_START");
+  _keyPress(_textbox("quickSearch"), [13,13]);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>\"/QuickSearchWindow/\"</td></tr></table>", "GROUP_START");
+  _selectWindow("/QuickSearchWindow/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_image(\"iconNewWindow.gif[1]\")</td></tr></table>", "GROUP_START");
+  _click(_image("iconNewWindow.gif[1]"));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Get_Summary_Report_Data() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Get_Summary_Report_Data", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Get Summary Report Data", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>/blank/</td></tr></table>", "GROUP_START");
+  _selectWindow("/blank/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"All Affected Items\")</td></tr></table>", "GROUP_START");
+  _click(_link("All Affected Items"), null);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_image(\"iconNewWindow.gif[1]\", _near(_cell(\"0353040-000[3]\")))</td></tr></table>", "GROUP_START");
+  _click(_image("iconNewWindow.gif[1]", _near(_cell("0353040-000[3]"))), null);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>/parentOID/</td></tr></table>", "GROUP_START");
+  _selectWindow("/parentOID/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"BOM Compare\")</td></tr></table>", "GROUP_START");
+  _click(_link("BOM Compare"), null);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Changes Only\")</td></tr></table>", "GROUP_START");
+  _click(_link("Changes Only"), null);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Store: _getText</td><td>_cell(1, _under(_parentNode(_row(\"Previous[1]\"),\"TH\"),20))</td><td>$FNPrevious</td></tr></table>", "GROUP_START");
+  $FNPrevious =   _getText(_cell(1, _under(_parentNode(_row("Previous[1]"),"TH"),20)));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Store: _getText</td><td>_cell(1, _under(_parentNode(_row(\"Previous[2]\"),\"TH\"),20))</td><td>$PartPrevious</td></tr></table>", "GROUP_START");
+  $PartPrevious =   _getText(_cell(1, _under(_parentNode(_row("Previous[2]"),"TH"),20)));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_closeWindow</td></tr></table>", "GROUP_START");
+  _closeWindow();
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>/blank/</td></tr></table>", "GROUP_START");
+  _selectWindow("/blank/");
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Summary_Report() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Summary_Report", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Summary Report", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>/blank/</td></tr></table>", "GROUP_START");
+  _selectWindow("/blank/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Details\")</td></tr></table>", "GROUP_START");
+  _click(_link("Details"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Summary Report w/ EBOM\")</td></tr></table>", "GROUP_START");
+  _click(_span("Summary Report w/ EBOM"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>/report/</td></tr></table>", "GROUP_START");
+  _selectWindow("/report/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_radio(\"PDF\")</td></tr></table>", "GROUP_START");
+  _click(_radio("PDF"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Continue\")</td></tr></table>", "GROUP_START");
+  _click(_link("Continue"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Report\")</td></tr></table>", "GROUP_START");
+  _click(_link("Report"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_saveDownloadedAs</td><td>C:\\\\Users\\\\larumug\\\\sahi_pro\\\\userdata\\\\ExportedData\\\\SummaryReport.pdf</td></tr></table>", "GROUP_START");
+  _saveDownloadedAs("C:\\Users\\larumug\\sahi_pro\\userdata\\ExportedData\\SummaryReport.pdf");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Raw Script</td></tr></table>", "GROUP_START");
+var $tabulaJarPath = _userDataPath("tabula\\tabula-1.0.5-jar-with-dependencies.jar");
+var $inputfile = "C:\\Users\\larumug\\sahi_pro\\userdata\\ExportedData\\SummaryReport.pdf"
+var $outputFile ="C:\\Users\\larumug\\sahi_pro\\userdata\\ExportedData\\output.csv"
+
+_execute("java -jar "+$tabulaJarPath+" "+ $inputfile + "  -l -o "+$outputFile+ " -p all", true)
+
+var $path ="C:\\Users\\larumug\\sahi_pro\\userdata\\ExportedData\\output.csv"
+var $data= _readCSVFile($path);
+
+var $bool=false;
+for(var $i=0;$i<$data.length; $i++){
+	if($data[$i].indexOf($FNprevious)!=-1 &&  $data[$i].indexOf($PartPrevious)!=-1)	$bool=true;
+		
+}
+_log("Checking the FN Previous " +$FNprevious + "and Part Previous"+ $PartPrevious+" Present in the Summary Report" );
+_assert($bool)
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+
+
+/*Functions End*/
+
+
+/*Data Start*/
+
+var $s = {"co" : [{"__created_via_prepath" : false,"invalids" : {},"valids" : {},"accessors" : {},"entityType" : "co"}],"global" : [{"exists" : true,"entityType" : "global","__id" : 0}]}
+
+/*Data End*/
+
+
+/*Data Overrides Start*/
+
+
+
+/*Data Overrides End*/
+
+
+
+/*Function Calls Start*/
+
+_tfc_Login_3d_Experience();
+_tfc_Open_Existing_Co($s.co[0]);
+_tfc_Get_Summary_Report_Data();
+_tfc_Summary_Report();
+
+
+/*Function Calls End*/
+

@@ -1,0 +1,222 @@
+_focusWindow();
+_sahi.setTFCModeEnabled();
+
+
+/*Functions Start*/
+
+_include("sahi_tfc_common.flowcharts.sah");
+
+
+var $__tfcix=0;
+var $__tfc_validation=false;
+function _tfc_Login_3d_Experience() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Login_3d_Experience", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Login 3d Experience", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(\"username\")</td><td>earivazh</td></tr></table>", "GROUP_START");
+  _setValue(_textbox("username"), "earivazh");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setPassword</td><td>_password(\"password\")</td><td>\"*****\"</td></tr></table>", "GROUP_START");
+  _setPassword(_password("password"), "enoviaKLA123", true);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_submit(\"Log in\")</td></tr></table>", "GROUP_START");
+  _click(_submit("Log in"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_windowAction</td><td>maximize</td></tr></table>", "GROUP_START");
+  _windowAction("maximize");
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Open_Existing_Co($co) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Open_Existing_Co", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Open Existing $co", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(\"quickSearch\")</td><td>D70127</td></tr></table>", "GROUP_START");
+  _setValue(_textbox("quickSearch"), "D70127");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_keyPress</td><td>_textbox(\"quickSearch\")</td><td>[13,13]</td></tr></table>", "GROUP_START");
+  _keyPress(_textbox("quickSearch"), [13,13]);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>\"/QuickSearchWindow/\"</td></tr></table>", "GROUP_START");
+  _selectWindow("/QuickSearchWindow/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_image(\"iconNewWindow.gif[1]\")</td></tr></table>", "GROUP_START");
+  _click(_image("iconNewWindow.gif[1]"));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_GotoDetails() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_GotoDetails", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("GotoDetails", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>/blank/</td></tr></table>", "GROUP_START");
+  _selectWindow("/blank/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"All Affected Items\")</td></tr></table>", "GROUP_START");
+  _click(_link("All Affected Items"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Store: _collect</td><td>_cell</td><td>/Unassigned/</td><td>_under(_parentNode(_row(\"EOL[1]\"), \"TH\"),20), _in(_table(\"tbr\"))</td><td>$EOLRows</td></tr></table>", "GROUP_START");
+  $EOLRows =   _collect("_cell", "/Unassigned/", _under(_parentNode(_row("EOL[1]"), "TH"),20), _in(_table("tbr")));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Raw Script</td></tr></table>", "GROUP_START");
+_selectWindow("/blank/");
+$EOLPreCheckReport=[];
+//var $EOLRows = _collect("_cell","/Unassigned/", _under(_parentNode(_row("EOL[1]"), "TH"),20), _in(_table("tbr")));
+for(var $i=0; $i<$EOLRows.length;$i++){
+_log("Getting the values from "+_getText($EOLRows[$i] ));
+var $EolRowPart = _getText(_cell(0, _leftOf($EOLRows[$i]), _under(_parentNode(_row("Name[1]"), "TH"),20)));
+_log("Part " + $EolRowPart);
+var $EolRowRev = _getText(_cell(0, _leftOf($EOLRows[$i]), _under(_parentNode(_row("Rev[1]"), "TH"),20)))
+_log("EolRowRev " + $EolRowRev);
+$EOLPreCheckReport.push([$EolRowPart, $EolRowRev]);
+}
+_log($EOLPreCheckReport);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_log</td><td>$EOLPreCheckReport</td></tr></table>", "GROUP_START");
+  _log($EOLPreCheckReport);
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Precheck_Report() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Precheck_Report", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Precheck Report", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>/blank/</td></tr></table>", "GROUP_START");
+  _selectWindow("/blank/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_log</td><td>$EOLPreCheckReport</td></tr></table>", "GROUP_START");
+  _log($EOLPreCheckReport);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Details\")</td></tr></table>", "GROUP_START");
+  _click(_link("Details"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Precheck Report\")</td></tr></table>", "GROUP_START");
+  _click(_span("Precheck Report"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>\"/PrecheckReport/\"</td></tr></table>", "GROUP_START");
+  _selectWindow("/PrecheckReport/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Store: _getTableContents</td><td>_table(0,_under(_parentTable(_cell(\"CO - All Affected Items with EOL as \\\"Unassigned\\\"\"))))</td><td>[\"Part\",\"Revision\"]</td><td>$EOLPrecheckTabledata</td></tr></table>", "GROUP_START");
+  $EOLPrecheckTabledata =   _getTableContents(_table(0,_under(_parentTable(_cell("CO - All Affected Items with EOL as \"Unassigned\"")))), ["Part","Revision"]);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Raw Script</td></tr></table>", "GROUP_START");
+$EOLPrecheckTabledata.shift()
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_log</td><td>$EOLPrecheckTabledata</td></tr></table>", "GROUP_START");
+  _log($EOLPrecheckTabledata);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Assert Is True: _areEqual</td><td>$EOLPreCheckReport</td><td>$EOLPrecheckTabledata</td></tr></table>", "GROUP_START");
+  _assertEqual(true,   _areEqual($EOLPreCheckReport, $EOLPrecheckTabledata));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Summary_Report() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Summary_Report", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Summary Report", "GROUP_START");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+
+
+/*Functions End*/
+
+
+/*Data Start*/
+
+var $s = {"co" : [{"__created_via_prepath" : false,"invalids" : {},"valids" : {},"accessors" : {},"entityType" : "co"}],"global" : [{"exists" : true,"entityType" : "global","__id" : 0}]}
+
+/*Data End*/
+
+
+/*Data Overrides Start*/
+
+
+
+/*Data Overrides End*/
+
+
+
+/*Function Calls Start*/
+
+_tfc_Login_3d_Experience();
+_tfc_Open_Existing_Co($s.co[0]);
+_tfc_GotoDetails();
+_tfc_Precheck_Report();
+
+
+/*Function Calls End*/
+

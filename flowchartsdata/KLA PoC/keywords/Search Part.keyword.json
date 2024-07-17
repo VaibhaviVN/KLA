@@ -1,0 +1,56 @@
+{
+  "modifiedOn": "2024-06-27T09:29:47.481Z",
+  "name": "Search Part",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-24T16:50:49Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Search Part",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_log",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "$part.partNumberArr[1]"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_log",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "$part.partNumberArr[1].replace(\"-AA\",\"\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_textbox(\"quickSearch\")"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "$part.partNumberArr[1].replace(\"-AA\",\"\")"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

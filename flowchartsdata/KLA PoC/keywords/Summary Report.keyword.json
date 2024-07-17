@@ -1,0 +1,145 @@
+{
+  "modifiedOn": "2024-07-10T07:28:21.948Z",
+  "name": "Summary Report",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-22T04:29:19Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Summary Report",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "/blank/"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": true,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"Summary Report\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_link(\"Details\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"Summary Report w/ EBOM\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "/report/"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_radio(\"PDF\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_link(\"Continue\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_wait",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "90000"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_isVisible(_link(\"Report\"))"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_link(\"Report\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_saveDownloadedAs",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "C:\\\\Users\\\\larumug\\\\sahi_pro\\\\userdata\\\\ExportedData\\\\SummaryReport.pdf"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "var $tabulaJarPath \u003d _userDataPath(\"tabula\\\\tabula-1.0.5-jar-with-dependencies.jar\");\nvar $inputfile \u003d \"C:\\\\Users\\\\larumug\\\\sahi_pro\\\\userdata\\\\ExportedData\\\\SummaryReport.pdf\"\nvar $outputFile \u003d\"C:\\\\Users\\\\larumug\\\\sahi_pro\\\\userdata\\\\ExportedData\\\\output.csv\"\n\n_execute(\"java -jar \"+$tabulaJarPath+\" \"+ $inputfile + \"  -l -o \"+$outputFile+ \" -p all\", true)\n\nvar $path \u003d\"C:\\\\Users\\\\larumug\\\\sahi_pro\\\\userdata\\\\ExportedData\\\\output.csv\"\nvar $data\u003d _readCSVFile($path);\n\nvar $bool\u003dfalse;\nfor(var $i\u003d0;$i\u003c$data.length; $i++){\n\tif($data[$i].indexOf($FNPrevious)!\u003d-1 \u0026\u0026  $data[$i].indexOf($PartPrevious)!\u003d-1)\t$bool\u003dtrue;\n\t\t\n}\n_log(\"Checking the FN Previous \" +$FNPrevious + \"and Part Previous\"+ $PartPrevious+\" Present in the Summary Report\" );\n_assert($bool)"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

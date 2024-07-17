@@ -1,0 +1,158 @@
+_focusWindow();
+_sahi.setTFCModeEnabled();
+
+
+/*Functions Start*/
+
+_include("sahi_tfc_common.flowcharts.sah");
+
+
+var $__tfcix=1;
+var $__tfc_validation=false;
+function _tfc_Login_3d_Experience() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Login_3d_Experience", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Login 3d Experience", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(\"username\")</td><td>earivazh</td></tr></table>", "GROUP_START");
+  _setValue(_textbox("username"), "earivazh");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setPassword</td><td>_password(\"password\")</td><td>\"*****\"</td></tr></table>", "GROUP_START");
+  _setPassword(_password("password"), "enoviaKLA123", true);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_submit(\"Log in\")</td></tr></table>", "GROUP_START");
+  _click(_submit("Log in"));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Create_Part($part) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Create_Part", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Create $part", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_wait</td><td>8000</td></tr></table>", "GROUP_START");
+  _wait(8000);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"add topbar-menu-item topbar-cmd enabled fonticon fonticon-plus\")</td></tr></table>", "GROUP_START");
+  _click(_div("add topbar-menu-item topbar-cmd enabled fonticon fonticon-plus"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_listItem(\"Create Part\")</td></tr></table>", "GROUP_START");
+  _click(_listItem("Create Part"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>/NonModalWindow/</td></tr></table>", "GROUP_START");
+  _selectWindow("/NonModalWindow/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(0, _rightOf(_span(\"Type\"),50))</td><td>Cable</td></tr></table>", "GROUP_START");
+  _setValue(_textbox(0, _rightOf(_span("Type"),50)), "Cable");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"Cable and Harness\")</td></tr></table>", "GROUP_START");
+  _click(_div("Cable and Harness"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textarea(\"descr\")</td><td>Test</td></tr></table>", "GROUP_START");
+  _setValue(_textarea("descr"), "Test");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(0,_rightOf(_cell(\"Project\")))</td><td>WIN 7xxx</td></tr></table>", "GROUP_START");
+  _setValue(_textbox(0,_rightOf(_cell("Project"))), "WIN 7xxx");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"WIN 7XXX\")</td></tr></table>", "GROUP_START");
+  _click(_div("WIN 7XXX"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_textbox(0,_rightOf(_cell(\"Unit of Measure\")))</td></tr></table>", "GROUP_START");
+  _click(_textbox(0,_rightOf(_cell("Unit of Measure"))));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"EA (each)\")</td></tr></table>", "GROUP_START");
+  _click(_div("EA (each)"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_cell(\".tvc.btn.continue.img\")</td></tr></table>", "GROUP_START");
+  _click(_cell(".tvc.btn.continue.img"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Done\")</td></tr></table>", "GROUP_START");
+  _click(_link("Done"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td></tr></table>", "GROUP_START");
+  _selectWindow();
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>Store: _extract</td><td>_getText(_div(\"TopPanelTitle\"))</td><td>(.*):(.*)</td><td>true</td><td>$part.partNumberArr</td></tr></table>", "GROUP_START");
+  $part.partNumberArr =   _extract(_getText(_div("TopPanelTitle")), "(.*):(.*)", true);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_log</td><td>$part.partNumberArr</td></tr></table>", "GROUP_START");
+  var $unescapeVar_1 = unescapeString($part.partNumberArr);
+  _log($unescapeVar_1);
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+
+
+/*Functions End*/
+
+
+/*Data Start*/
+
+var $s = {"global" : [{"exists" : true,"entityType" : "global","__id" : 0}],"part" : [{"__created_via_prepath" : true,"invalids" : {},"valids" : {},"accessors" : {},"entityType" : "part"}]}
+
+/*Data End*/
+
+
+/*Data Overrides Start*/
+
+
+
+/*Data Overrides End*/
+
+
+
+/*Function Calls Start*/
+
+_tfc_Create_Part($s.part[0]);
+
+
+/*Function Calls End*/
+

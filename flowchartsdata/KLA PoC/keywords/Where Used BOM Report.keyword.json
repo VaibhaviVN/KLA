@@ -1,0 +1,64 @@
+{
+  "modifiedOn": "2024-07-09T11:19:46.132Z",
+  "name": "Where Used BOM Report",
+  "id": "0",
+  "type": 3,
+  "createdOn": "2024-07-09T11:19:46.132Z",
+  "content": {
+    "title": "Where Used BOM Report",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "stepParameters": [
+          {
+            "customValue": "_div(\"add topbar-menu-item topbar-cmd enabled fonticon fonticon-plus\")",
+            "paramMode": "code"
+          },
+          {
+            "customValue": "",
+            "paramMode": "default"
+          }
+        ],
+        "action": "_click",
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "stepParameters": [
+          {
+            "customValue": "_listItem(\"Reports\")",
+            "paramMode": "code"
+          },
+          {
+            "customValue": "",
+            "paramMode": "default"
+          }
+        ],
+        "action": "_mouseOver",
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "stepParameters": [
+          {
+            "customValue": "_span(\"Where-Used BOM Report\")",
+            "paramMode": "code"
+          },
+          {
+            "customValue": "",
+            "paramMode": "default"
+          }
+        ],
+        "action": "_click",
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      }
+    ],
+    "isSystemKeyword": false
+  },
+  "enabled": false,
+  "parentId": ""
+}

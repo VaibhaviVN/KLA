@@ -1,0 +1,80 @@
+{
+  "modifiedOn": "2024-07-11T10:02:00.899Z",
+  "name": "Get Active $task",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-07-10T17:14:11Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Get Active $task",
+    "parameters": [
+      {
+        "parameterId": "task_",
+        "entityTypeId": "task",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_italic(\"dropdown icon\", _in(_div(\"selection ui dropdown upward\")))"
+          },
+          {
+            "paramMode": "default"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"100\", _in(_div(\"menu transition visible\")))"
+          },
+          {
+            "paramMode": "default"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_collectAttributes",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "_link"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "/Object/"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "sahiText"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_under(_tableHeader(\"Related Obj.\"))"
+          }
+        ],
+        "stepType": "Store",
+        "stepCategory": "inbuilt",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$task.activeTasks"
+        }
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

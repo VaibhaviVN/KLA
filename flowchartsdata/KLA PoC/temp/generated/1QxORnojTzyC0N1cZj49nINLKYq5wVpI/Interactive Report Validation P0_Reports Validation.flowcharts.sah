@@ -1,0 +1,155 @@
+_focusWindow();
+_sahi.setTFCModeEnabled();
+
+
+/*Functions Start*/
+
+_include("sahi_tfc_common.flowcharts.sah");
+
+
+var $__tfcix=0;
+var $__tfc_validation=false;
+function _tfc_Login_3d_Experience() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Login_3d_Experience", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Login 3d Experience", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(\"username\")</td><td>earivazh</td></tr></table>", "GROUP_START");
+  _setValue(_textbox("username"), "earivazh");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setPassword</td><td>_password(\"password\")</td><td>\"*****\"</td></tr></table>", "GROUP_START");
+  _setPassword(_password("password"), "enoviaKLA123", true);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_submit(\"Log in\")</td></tr></table>", "GROUP_START");
+  _click(_submit("Log in"));
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Create_Changeorder($changeorder) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Create_Changeorder", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Create $changeorder", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"add topbar-menu-item topbar-cmd enabled fonticon fonticon-plus\")</td></tr></table>", "GROUP_START");
+  _click(_div("add topbar-menu-item topbar-cmd enabled fonticon fonticon-plus"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_span(\"Create Change Order\")</td></tr></table>", "GROUP_START");
+  _click(_span("Create Change Order"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td><td>/NonModalWindow/</td></tr></table>", "GROUP_START");
+  _selectWindow("/NonModalWindow/");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>Description Input ($changeorder)</td><td>$changeorder.description</td></tr></table>", "GROUP_START");
+  var $unescapeVar_2 = unescapeString($changeorder.description);
+  _setValue($changeorder.accessors.attr_01718968102610[0].accessor, $unescapeVar_2);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"/selectize-input items/\", _near(_cell(\"Project\")))</td><td></td></tr></table>", "GROUP_START");
+  _click(_div("/selectize-input items/", _near(_cell("Project"))), "");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(0,_in(_div(\"/selectize-input items/\", _near(_cell(\"Project\")))))</td><td>WIN 7xxx</td></tr></table>", "GROUP_START");
+  _setAutomaticBlur(false);
+  _setValue(_textbox(0,_in(_div("/selectize-input items/", _near(_cell("Project"))))), "WIN 7xxx");
+  _setAutomaticBlur(true);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"active\")</td></tr></table>", "GROUP_START");
+  _click(_div("active"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"/selectize-input items/\", _near(_cell(\"Change Coordinator\")))</td><td></td></tr></table>", "GROUP_START");
+  _click(_div("/selectize-input items/", _near(_cell("Change Coordinator"))), "");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"BANADOS, IMELDA\")</td></tr></table>", "GROUP_START");
+  _click(_div("BANADOS, IMELDA"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"/selectize-input items/\", _near(_cell(\"Change Classification\")))</td><td></td></tr></table>", "GROUP_START");
+  _click(_div("/selectize-input items/", _near(_cell("Change Classification"))), "");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"6 Business Process only\")</td></tr></table>", "GROUP_START");
+  _click(_div("6 Business Process only"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"/selectize-input items/\", _near(_cell(\"CO Type\")))</td><td></td></tr></table>", "GROUP_START");
+  _click(_div("/selectize-input items/", _near(_cell("CO Type"))), "");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_div(\"Business Procedure\")</td></tr></table>", "GROUP_START");
+  _click(_div("Business Procedure"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_link(\"Done\")</td></tr></table>", "GROUP_START");
+  _click(_link("Done"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_selectWindow</td></tr></table>", "GROUP_START");
+  _selectWindow();
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+
+
+/*Functions End*/
+
+
+/*Data Start*/
+
+var $s = {"changeorder" : [{"description" : _generateData("text", {"prefix" : "Test","min-length" : "1","max-length" : "20","include-alphabet" : "true","include-numeric" : "false","include-special" : "false"}),"__created_via_prepath" : false,"invalids" : {"description" : []},"valids" : {"description" : []},"accessors" : {"attr_01718968102610" : [{"id" : "acc0","name" : "Description Input","accessor" : _textarea("descr"),"messageAccessor" : ""}]},"entityType" : "changeorder"}],"global" : [{"exists" : true,"entityType" : "global","__id" : 0}]}
+
+/*Data End*/
+
+
+/*Data Overrides Start*/
+
+
+
+/*Data Overrides End*/
+
+
+
+/*Function Calls Start*/
+
+_tfc_Login_3d_Experience();
+_tfc_Create_Changeorder($s.changeorder[0]);
+
+/*Function Calls End*/
+

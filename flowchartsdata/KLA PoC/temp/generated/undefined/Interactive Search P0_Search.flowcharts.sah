@@ -1,0 +1,111 @@
+_focusWindow();
+_sahi.setTFCModeEnabled();
+
+
+/*Functions Start*/
+
+_include("sahi_tfc_common.flowcharts.sah");
+
+
+var $__tfcix=1;
+var $__tfc_validation=false;
+function _tfc_Login_3d_Experience() {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Login_3d_Experience", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Login 3d Experience", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setValue</td><td>_textbox(\"username\")</td><td>earivazh</td></tr></table>", "GROUP_START");
+  _setValue(_textbox("username"), "earivazh");
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_setPassword</td><td>_password(\"password\")</td><td>\"*****\"</td></tr></table>", "GROUP_START");
+  _setPassword(_password("password"), "enoviaKLA123", true);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_click</td><td>_submit(\"Log in\")</td></tr></table>", "GROUP_START");
+  _click(_submit("Log in"));
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_windowAction</td><td>maximize</td></tr></table>", "GROUP_START");
+  _windowAction("maximize");
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Open_Keyword_Search($keyword) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Open_Keyword_Search", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Open $keyword Search", "GROUP_START");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_log</td><td>$keyword.owner</td></tr></table>", "GROUP_START");
+  var $unescapeVar_1 = unescapeString($keyword.owner);
+  _log($unescapeVar_1);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_log</td><td>$keyword.newproject</td></tr></table>", "GROUP_START");
+  _log($keyword.newproject);
+
+  _tfcLog("", "GROUP_END");
+
+  _tfcLog("<table class=\"tfc_step_table\"><tr><td>_log</td><td>$keyword.state</td></tr></table>", "GROUP_START");
+  var $unescapeVar_1 = unescapeString($keyword.state);
+  _log($unescapeVar_1);
+
+  _tfcLog("", "GROUP_END");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+function _tfc_Verify_Keyword_Search($keyword) {
+  if (!$__tfc_validation) _tfcLog($__tfcix+ "__tfcstart__:_tfc_Verify_Keyword_Search", "NO_LOG");
+
+  if (!$__tfc_validation) _tfcLog("Verify $keyword Search", "GROUP_START");
+
+
+  if (!$__tfc_validation) { _tfcLog($__tfcix+ "__tfcend__", "NO_LOG");  $__tfcix++;  }
+
+  if (!$__tfc_validation) { _tfcLog("", "GROUP_END"); }
+
+}
+
+
+
+/*Functions End*/
+
+
+/*Data Start*/
+
+var $s = {"global" : [{"exists" : true,"entityType" : "global","__id" : 0}],"keyword" : [{"owner" : "Elangovan","invalids" : {"owner" : [],"project" : [],"state" : [],"partType" : []},"valids" : {"owner" : [],"project" : [],"state" : [],"partType" : []},"accessors" : {"attr_21720430807471" : [{"id" : "acc0","name" : "Owner Input","accessor" : _textbox(0, _near(_span("Owner"))),"messageAccessor" : ""}],"attr_01720430807471" : [{"id" : "acc0","name" : "Part Type Input","accessor" : _textbox(0, _near(_span("Part Subtype"))),"messageAccessor" : ""}],"attr_11720430807471" : [{"id" : "acc0","name" : "Project Input","accessor" : _textbox(0, _near(_span("Project"))),"messageAccessor" : ""}],"attr_31720431052163" : [{"id" : "acc0","name" : "State Input","accessor" : "","messageAccessor" : ""}]},"entityType" : "keyword","project" : "WIN 7XXX","__created_via_prepath" : false,"state" : "Release","partType" : "Cable and Harness"}]}
+
+/*Data End*/
+
+
+/*Data Overrides Start*/
+
+
+
+/*Data Overrides End*/
+
+
+
+/*Function Calls Start*/
+
+_tfc_Open_Keyword_Search($s.keyword[0]);
+
+
+/*Function Calls End*/
+

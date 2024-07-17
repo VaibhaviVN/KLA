@@ -1,0 +1,65 @@
+{
+  "modifiedOn": "2024-07-10T15:57:17.437Z",
+  "name": "test",
+  "id": "-1",
+  "type": 0,
+  "createdOn": "2024-07-10T10:26:46Z",
+  "content": {
+    "nodesMap": {
+      "fcn_start_0": {
+        "id": "fcn_start_0",
+        "content": "Start",
+        "nodeType": "start",
+        "branches": [
+          "fcn_test1_0"
+        ],
+        "dataSetId": "-1"
+      },
+      "fcn_test1_0": {
+        "id": "fcn_test1_0",
+        "content": "test1",
+        "nodeType": "pathlabel",
+        "branches": [
+          "fcn_test2_0"
+        ],
+        "dataSetId": -1
+      },
+      "fcn_test2_0": {
+        "id": "fcn_test2_0",
+        "content": "test2",
+        "nodeType": "action",
+        "branches": [],
+        "dataSetId": -1
+      }
+    },
+    "positions": {
+      "fcn_start_0": {
+        "top": 150,
+        "left": 500
+      },
+      "fcn_test1_0": {
+        "top": 211.8,
+        "left": 500
+      },
+      "fcn_test2_0": {
+        "top": 270.40000305175784,
+        "left": 500
+      }
+    },
+    "settings": {
+      "maxProceedsPerPath": 10000,
+      "maxProceedDepth": 100,
+      "maxProceedsPerDepth": 1,
+      "maxProceedsForFirstDepth": 1,
+      "maxMatchingPaths": 3,
+      "maxPathRepititionsPerComboPath": 1,
+      "maxToggles": 2
+    },
+    "isPrimary": true,
+    "pathNames": [],
+    "flowChartUID": "fcUID_1720627001687",
+    "pathExecutionOrder": []
+  },
+  "enabled": true,
+  "parentId": ""
+}

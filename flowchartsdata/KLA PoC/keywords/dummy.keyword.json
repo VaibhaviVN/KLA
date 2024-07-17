@@ -1,0 +1,23 @@
+{
+  "modifiedOn": "2024-06-25T10:23:24.301Z",
+  "name": "dummy",
+  "id": "0",
+  "type": 3,
+  "createdOn": "2024-06-25T10:23:24.301Z",
+  "content": {
+    "title": "dummy",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_log",
+        "stepParameters": [],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      }
+    ],
+    "isSystemKeyword": false
+  },
+  "enabled": false,
+  "parentId": ""
+}

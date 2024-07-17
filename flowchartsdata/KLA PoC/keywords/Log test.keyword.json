@@ -1,0 +1,45 @@
+{
+  "modifiedOn": "2024-07-16T10:03:55.386Z",
+  "name": "Log test",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-07-15T22:57:05Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Log test",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_log",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "test"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": true,
+        "action": "_areEqual",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "test"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "tes2"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Assert",
+        "assertType": "Is_True"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

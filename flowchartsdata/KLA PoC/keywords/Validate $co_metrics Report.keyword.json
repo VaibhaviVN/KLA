@@ -1,0 +1,67 @@
+{
+  "modifiedOn": "2024-07-09T11:15:58.617Z",
+  "name": "Validate $co_metrics Report",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-07-02T07:22:11Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Validate $co_metrics Report",
+    "parameters": [
+      {
+        "parameterId": "co_metrics_",
+        "entityTypeId": "co_metrics",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "\"/ModalDialog/\""
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": true,
+        "action": "_collectAttributes",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "_cell"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "/.*/"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "sahiText"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_under(_tableHeader(\"State\"),0)"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Store",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$CoState"
+        }
+      },
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "var $i\u003d0;\nvar $index\u003d _getText(_cell(\"/of/\"));\n$index \u003d $index.split(\" \")[1];\n_log($index);\nwhile($i\u003c$index){\nvar $CoState \u003d _collectAttributes(\"_cell\",\"/.*/\",\"sahiText\",_under(_tableHeader(\"State\"),0));\nvar $dates \u003d_collectAttributes(\"_cell\",\"/.*/\",\"sahiText\",_under(_tableHeader(\"Create Date\"),0),_in(_table(\"KLACOMetricsSearchResults\")));\n_log($dates);\nfor(var $i\u003d0;$i\u003c$CoState.length;$i++){\n_assertEqual($co_metrics.state, $CoState[$i]);\n\nvar $startDateStr \u003d $dates[$i];\n_log($startDateStr )\nvar $inputFormatter \u003d new java.text.SimpleDateFormat(\"M/d/yyyy hh:mm:ss a\");\nvar $boundaryFormatter \u003d new java.text.SimpleDateFormat(\"MMM d, yyyy\");\n \nvar $startDate \u003d $inputFormatter.parse($startDateStr);\n \n// Define the boundaries\nvar $lowerBound \u003d $boundaryFormatter.parse($co_metrics.startDate);\nvar $upperBound \u003d $boundaryFormatter.parse($co_metrics.endDate);\n \n// Check if the start date is within the bounds\n\nvar $isValid \u003d $startDate.after($lowerBound) \u0026\u0026 $startDate.before($upperBound);\n \n_assertTrue($isValid);\n}\n\n_click(_image(\"Next Page\"));\n$i++;\n}"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

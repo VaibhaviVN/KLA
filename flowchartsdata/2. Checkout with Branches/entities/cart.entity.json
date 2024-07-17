@@ -1,0 +1,71 @@
+{
+  "modifiedOn": "2024-04-08T05:22:30.975Z",
+  "name": "cart",
+  "id": "44839",
+  "type": 1,
+  "createdOn": "2024-04-08T05:22:30.975Z",
+  "content": {
+    "default": {
+      "attr_01679636987669": {
+        "name": "subtotal",
+        "accessors": [
+          {
+            "id": "acc0",
+            "name": "Subtotal Input",
+            "accessor": "_cell(1, _near(_strong(\"Sub-Total:\")))",
+            "messageAccessor": ""
+          }
+        ],
+        "type": "text",
+        "props": {
+          "prefix": "$200.00",
+          "min-length": 0,
+          "max-length": 0
+        },
+        "invalidData": [],
+        "validData": []
+      },
+      "attr_11679636987670": {
+        "name": "discount",
+        "accessors": [
+          {
+            "id": "acc0",
+            "name": "Discount Input",
+            "accessor": "_cell(1, _near(_strong(\"/Coupon (.*):/\")))",
+            "messageAccessor": ""
+          }
+        ],
+        "type": "text",
+        "props": {
+          "prefix": "$-20.00",
+          "min-length": 0,
+          "max-length": 0
+        },
+        "invalidData": [],
+        "validData": []
+      },
+      "attr_21679636987670": {
+        "name": "total",
+        "accessors": [
+          {
+            "id": "acc0",
+            "name": "Total Input",
+            "accessor": "_cell(1, _near(_strong(\"Total:\")))",
+            "messageAccessor": ""
+          }
+        ],
+        "type": "text",
+        "props": {
+          "prefix": "$180.00",
+          "min-length": 0,
+          "max-length": 0
+        },
+        "invalidData": [],
+        "validData": []
+      }
+    },
+    "specific": []
+  },
+  "enabled": false,
+  "parentId": ""
+}

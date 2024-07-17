@@ -1,0 +1,28 @@
+{
+  "modifiedOn": "2024-06-25T14:02:57.006Z",
+  "name": "Click on Download",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-25T00:15:54Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Click on Download",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": true,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_image(\"Download\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

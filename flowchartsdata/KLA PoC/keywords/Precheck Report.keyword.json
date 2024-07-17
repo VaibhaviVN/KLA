@@ -1,0 +1,202 @@
+{
+  "modifiedOn": "2024-07-09T11:23:40.789Z",
+  "name": "Precheck Report",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-24T00:23:43Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Precheck Report",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "/blank/"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_link(\"All Affected Items\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_collect",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "_cell"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "/Unassigned/"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_under(_parentNode(_row(\"EOL[1]\"), \"TH\"),20), _in(_table(\"tbr\"))"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Store",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$EOLRows"
+        }
+      },
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "_selectWindow(\"/blank/\");\n$EOLPreCheckReport\u003d[];\n//var $EOLRows \u003d _collect(\"_cell\",\"/Unassigned/\", _under(_parentNode(_row(\"EOL[1]\"), \"TH\"),20), _in(_table(\"tbr\")));\nfor(var $i\u003d0; $i\u003c$EOLRows.length;$i++){\n_log(\"Getting the values from \"+_getText($EOLRows[$i] ));\nvar $EolRowPart \u003d _getText(_cell(0, _leftOf($EOLRows[$i]), _under(_parentNode(_row(\"Name[1]\"), \"TH\"),20)));\n_log(\"Part \" + $EolRowPart);\nvar $EolRowRev \u003d _getText(_cell(0, _leftOf($EOLRows[$i]), _under(_parentNode(_row(\"Rev[1]\"), \"TH\"),20)))\n_log(\"EolRowRev \" + $EolRowRev);\n$EOLPreCheckReport.push([$EolRowPart, $EolRowRev]);\n}\n_log($EOLPreCheckReport);"
+      },
+      {
+        "commented": false,
+        "action": "_log",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "$EOLPreCheckReport"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "/blank/"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_log",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "$EOLPreCheckReport"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_link(\"Details\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_span(\"Precheck Report\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_selectWindow",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "\"/PrecheckReport/\""
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_getTableContents",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_table(0,_under(_parentTable(_cell(\"CO - All Affected Items with EOL as \\\"Unassigned\\\"\"))))"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "[\"Part\",\"Revision\"]"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Store",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$EOLPrecheckTabledata"
+        }
+      },
+      {
+        "commented": false,
+        "isRawScript": true,
+        "rawScript": "$EOLPrecheckTabledata.shift()"
+      },
+      {
+        "commented": false,
+        "action": "_log",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "$EOLPrecheckTabledata"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_areEqual",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "$EOLPreCheckReport"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "$EOLPrecheckTabledata"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Assert",
+        "assertType": "Is_True"
+      },
+      {
+        "commented": false,
+        "action": "_closeWindow",
+        "stepParameters": [],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

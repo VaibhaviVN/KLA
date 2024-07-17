@@ -1,0 +1,71 @@
+{
+  "modifiedOn": "2024-07-09T10:16:49.053Z",
+  "name": "co_metrics",
+  "id": "-1",
+  "type": 1,
+  "createdOn": "2024-07-09T04:46:16Z",
+  "content": {
+    "default": {
+      "attr_01720520209044": {
+        "name": "startDate",
+        "accessors": [
+          {
+            "id": "acc0",
+            "name": "Start Date Input",
+            "accessor": "_textbox(\"txtStartDate\")",
+            "messageAccessor": ""
+          }
+        ],
+        "type": "text",
+        "props": {
+          "prefix": "Jul 1, 2024",
+          "min-length": "0",
+          "max-length": "0"
+        },
+        "invalidData": [],
+        "validData": []
+      },
+      "attr_11720520209044": {
+        "name": "endDate",
+        "accessors": [
+          {
+            "id": "acc0",
+            "name": "End Date Input",
+            "accessor": "_textbox(\"txtEndDate\")",
+            "messageAccessor": ""
+          }
+        ],
+        "type": "text",
+        "props": {
+          "prefix": "Jul 8, 2024",
+          "min-length": "0",
+          "max-length": "0"
+        },
+        "invalidData": [],
+        "validData": []
+      },
+      "attr_21720520209044": {
+        "name": "state",
+        "accessors": [
+          {
+            "id": "acc0",
+            "name": "State Input",
+            "accessor": "_select(\"txtPolicyState\")",
+            "messageAccessor": ""
+          }
+        ],
+        "type": "text",
+        "props": {
+          "prefix": "Release",
+          "min-length": "0",
+          "max-length": "0"
+        },
+        "invalidData": [],
+        "validData": []
+      }
+    },
+    "specific": []
+  },
+  "enabled": false,
+  "parentId": ""
+}

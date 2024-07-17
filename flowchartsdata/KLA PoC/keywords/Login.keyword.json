@@ -1,0 +1,54 @@
+{
+  "modifiedOn": "2024-06-25T14:47:45.140Z",
+  "name": "Login",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-06-23T16:33:19Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Login",
+    "parameters": [],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_setValue",
+        "stepParameters": [
+          {
+            "customValue": "_textbox(\"username\")",
+            "paramMode": "code"
+          },
+          {
+            "customValue": "larumug",
+            "paramMode": "string"
+          }
+        ]
+      },
+      {
+        "commented": false,
+        "action": "_setPassword",
+        "stepParameters": [
+          {
+            "customValue": "_password(\"password\")",
+            "paramMode": "code"
+          },
+          {
+            "customValue": "enoviaKLA123",
+            "paramMode": "string"
+          }
+        ]
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "customValue": "_submit(\"Log in\")",
+            "paramMode": "code"
+          }
+        ]
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}

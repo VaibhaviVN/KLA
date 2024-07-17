@@ -1,0 +1,128 @@
+{
+  "modifiedOn": "2024-07-11T10:40:09.522Z",
+  "name": "Verify $co Project Count",
+  "id": "-1",
+  "type": 3,
+  "createdOn": "2024-07-10T18:07:16Z",
+  "content": {
+    "isSystemKeyword": false,
+    "title": "Verify $co Project Count",
+    "parameters": [
+      {
+        "parameterId": "co_",
+        "entityTypeId": "co",
+        "suffix": ""
+      }
+    ],
+    "steps": [
+      {
+        "commented": false,
+        "action": "_getText",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"active section\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Assert",
+        "assertType": "Contains",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$co.projectCount"
+        }
+      },
+      {
+        "commented": false,
+        "action": "_setStrictVisibilityCheck",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "true"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "visibleCheck": true,
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_italic(0,_in(_div(\"headericon right openfullscreen\")))"
+          }
+        ],
+        "stepType": "Action",
+        "stepCategory": "inbuilt"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_italic(\"dropdown icon\")"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_click",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "_div(\"100\", _in(_div(\"menu transition visible\")))"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Action"
+      },
+      {
+        "commented": false,
+        "action": "_count",
+        "stepParameters": [
+          {
+            "paramMode": "string",
+            "customValue": "_link"
+          },
+          {
+            "paramMode": "string",
+            "customValue": "/D/"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "_under(_tableHeader(\"Name\"))"
+          }
+        ],
+        "stepCategory": "inbuilt",
+        "stepType": "Store",
+        "secondaryParam": {
+          "paramMode": "code",
+          "customValue": "$co.count"
+        }
+      },
+      {
+        "commented": false,
+        "action": "_areEqual",
+        "stepParameters": [
+          {
+            "paramMode": "code",
+            "customValue": "$co.projectCount"
+          },
+          {
+            "paramMode": "code",
+            "customValue": "$co.count"
+          }
+        ],
+        "stepType": "None",
+        "stepCategory": "inbuilt"
+      }
+    ]
+  },
+  "enabled": false,
+  "parentId": ""
+}
